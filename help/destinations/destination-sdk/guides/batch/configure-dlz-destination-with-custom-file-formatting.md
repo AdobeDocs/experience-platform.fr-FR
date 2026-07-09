@@ -3,17 +3,12 @@ description: Découvrez comment utiliser Destination SDK pour configurer une des
 title: Configurez une destination Data Landing Zone (DLZ) avec des options de formatage de fichiers personnalisées et une configuration des noms de fichiers personnalisée.
 exl-id: 3a5c1188-c2b5-4e81-ae41-9fff797f08a6
 TQID: https://experienceleague.adobe.com/Pu094HXFGjuP9dX1AC-zqlaefivMIgNDA81SgCqqlYY
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 681
+source-wordcount: 731
 ht-degree: 8%
 
 ---
@@ -30,7 +25,7 @@ Pour une description détaillée des paramètres utilisés ci-dessous, voir [opt
 
 ## Conditions préalables {#prerequisites}
 
-Avant de passer aux étapes décrites ci-dessous, lisez la page de prise en main de Destination SDK [&#128279;](../../getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification Adobe I/O nécessaires et d’autres conditions préalables pour travailler avec les API Destination SDK.
+Avant de passer aux étapes décrites ci-dessous, lisez la page de prise en main de Destination SDK [](../../getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification Adobe I/O nécessaires et d’autres conditions préalables pour travailler avec les API Destination SDK.
 
 ## Étape 1 : créer une configuration de serveur et de fichier {#create-server-file-configuration}
 
@@ -44,8 +39,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 **Requête**
 
-La requête suivante crée une configuration de serveur de destination, configurée en fonction des paramètres fournis dans la payload.
-La payload ci-dessous comprend une configuration de [!DNL Data Landing Zone] générique, avec des paramètres de configuration [formatage de fichier CSV](../../functionality/destination-server/file-formatting.md) personnalisés que les utilisateurs peuvent définir dans l’interface utilisateur d’Experience Platform.
+La requête suivante crée une configuration de serveur de destination, configurée en fonction des paramètres fournis dans la payload.La payload ci-dessous comprend une configuration de [!DNL Data Landing Zone] générique, avec des paramètres de configuration [formatage de fichier CSV](../../functionality/destination-server/file-formatting.md) personnalisés que les utilisateurs peuvent définir dans l’interface utilisateur d’Experience Platform.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -336,7 +330,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
       }
    ],
    "uiAttributes":{
-      "documentationLink":"https://www.adobe.io/apis/experienceplatform.html",
+      "documentationLink":"https://developer.adobe.com/experience-platform-apis/",
       "category":"DLZ",
       "connectionType":"Server-to-server",
       "frequency":"Batch",
@@ -426,7 +420,7 @@ En fonction des configurations ci-dessus, le catalogue Experience Platform affic
 
 ![Enregistrement de l’écran affichant la page de catalogue des destinations avec une carte de destination sélectionnée.](../../assets/guides/batch/dlz-destination-card.gif)
 
-Dans les images et les enregistrements ci-dessous, remarquez comment les options du [&#x200B; workflow d’activation pour les destinations basées sur des fichiers &#x200B;](../../../ui/activate-batch-profile-destinations.md) correspondent aux options que vous avez sélectionnées dans la configuration de destination.
+Dans les images et les enregistrements ci-dessous, remarquez comment les options du [ workflow d’activation pour les destinations basées sur des fichiers ](../../../ui/activate-batch-profile-destinations.md) correspondent aux options que vous avez sélectionnées dans la configuration de destination.
 
 Lorsque vous renseignez les détails sur la destination, remarquez comment les champs surfacés sont les champs de données personnalisés que vous configurez dans la configuration.
 
@@ -436,11 +430,9 @@ Lorsque vous renseignez les détails sur la destination, remarquez comment les c
 
 ![renseigner les détails de la destination](../../assets/guides/batch/file-configuration-options.gif)
 
-Lors de la planification des intervalles d’exportation, notez que les champs qui apparaissent sont ceux que vous avez configurés dans la configuration de `batchConfig`.
-![options de planification de l’exportation](../../assets/guides/batch/file-export-scheduling.png)
+Lors de la planification des intervalles d’exportation, notez que les champs qui apparaissent sont ceux que vous avez configurés dans la configuration de `batchConfig`.![options de planification de l’exportation](../../assets/guides/batch/file-export-scheduling.png)
 
-Lors de l’affichage des options de configuration de nom de fichier, remarquez comment les champs affichés représentent les options de `filenameConfig` que vous avez configurées dans la configuration.
-![options de configuration de nom de fichier](../../assets/guides/batch/file-naming-options.gif)
+Lors de l’affichage des options de configuration de nom de fichier, remarquez comment les champs affichés représentent les options de `filenameConfig` que vous avez configurées dans la configuration.![options de configuration de nom de fichier](../../assets/guides/batch/file-naming-options.gif)
 
 Si vous souhaitez ajuster l’un des champs mentionnés ci-dessus, répétez les [étapes 1](#create-server-file-configuration) et [2](#create-destination-configuration) pour modifier les configurations en fonction de vos besoins.
 

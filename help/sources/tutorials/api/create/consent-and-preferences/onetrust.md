@@ -5,14 +5,12 @@ title: Créer un flux de données pour une source d’intégration OneTrust à l
 description: Découvrez comment connecter Adobe Experience Platform à l’intégration OneTrust à l’aide de l’API Flow Service.
 exl-id: e224efe0-4756-4b8a-b446-a3e1066f2050
 TQID: https://experienceleague.adobe.com/tAfeK4m6cuZkjewjWaBc3qHu9B7tAxtOe7nK0xU-FZ0
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 1994
-ht-degree: 54%
+ht-degree: 53%
 
 ---
 
@@ -22,7 +20,7 @@ ht-degree: 54%
 >
 >La source [!DNL OneTrust Integration] prend uniquement en charge l’ingestion des données de consentement et de préférences, et non des cookies.
 
-Le tutoriel suivant vous guide tout au long des étapes de création d’une connexion source et d’un flux de données pour importer à la fois les données de consentement historiques et planifiées d’[[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) vers Adobe Experience Platform à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Le tutoriel suivant vous guide tout au long des étapes de création d’une connexion source et d’un flux de données pour importer à la fois les données de consentement historiques et planifiées d’[[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) vers Adobe Experience Platform à l’aide de l’[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Conditions préalables
 
@@ -40,7 +38,7 @@ Le jeton d’accès ne s’actualise pas automatiquement après son expiration, 
 >
 >Les spécifications de l’API [!DNL OneTrust Integration] sont partagées avec Adobe pour l’ingestion de données.
 
-Le tutoriel suivant vous guide tout au long des étapes nécessaires à la création d’une connexion source [!DNL OneTrust Integration] et d’un flux de données pour importer des données [!DNL OneTrust Integration] dans Experience Platform à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Le tutoriel suivant vous guide tout au long des étapes nécessaires à la création d’une connexion source [!DNL OneTrust Integration] et d’un flux de données pour importer des données [!DNL OneTrust Integration] dans Experience Platform à l’aide de l’[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ### Créer une connexion de base {#base-connection}
 
@@ -700,7 +698,7 @@ Une réponse réussie renvoie l’identifiant unique de la nouvelle connexion ci
 
 ### Créer un mappage {#mapping}
 
-Pour que les données sources soient ingérées dans un jeu de données cible, elles doivent d’abord être mappées au schéma cible auquel le jeu de données cible se rattache. Pour ce faire, il suffit d’adresser une requête POST à [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) avec des mappages de données définis dans la payload de la requête.
+Pour que les données sources soient ingérées dans un jeu de données cible, elles doivent d’abord être mappées au schéma cible auquel le jeu de données cible se rattache. Pour ce faire, il suffit d’adresser une requête POST à [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep) avec des mappages de données définis dans la payload de la requête.
 
 **Format d’API**
 
