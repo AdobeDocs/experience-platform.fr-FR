@@ -4,17 +4,11 @@ description: L’API Segmentation Service permet aux développeurs de gérer par
 role: Developer
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
 TQID: https://experienceleague.adobe.com/plysrtYhvrcwOTmaev4HRE-I2-an-AWMs3MkNogEvNs
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2:
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 621
 ht-degree: 4%
@@ -39,7 +33,7 @@ Pour plus d’informations sur l’utilisation de ce point d’entrée, consulte
 
 Les tâches d’exportation sont des processus asynchrones utilisés pour conserver les membres d’audience dans les jeux de données. Vous pouvez utiliser le point d’entrée `/export/jobs` pour récupérer toutes les tâches d’exportation, créer une tâche d’exportation, récupérer les détails d’une tâche d’exportation spécifique ou annuler une tâche d’exportation spécifique.
 
-Pour plus d’informations sur l’utilisation de ce point d’entrée, consultez le [&#x200B; guide des points d’entrée des tâches d’exportation](./export-jobs.md).
+Pour plus d’informations sur l’utilisation de ce point d’entrée, consultez le [ guide des points d’entrée des tâches d’exportation](./export-jobs.md).
 
 ## Audiences externes
 
@@ -65,7 +59,7 @@ Pour plus d’informations sur l’utilisation de ce point d’entrée, consulte
 
 Les définitions de segment définissent les profils qui feront partie de chaque audience. Vous pouvez utiliser le point d’entrée `/segment/definitions` pour gérer les définitions de segment.
 
-Pour plus d’informations sur l’utilisation de ce point d’entrée, consultez le [&#x200B; guide des points d’entrée des définitions de segment](./segment-definitions.md).
+Pour plus d’informations sur l’utilisation de ce point d’entrée, consultez le [ guide des points d’entrée des définitions de segment](./segment-definitions.md).
 
 ## Tâches de segmentation
 
@@ -80,3 +74,4 @@ La recherche de segments permet de rechercher des champs contenus dans différen
 ## Étapes suivantes
 
 Pour commencer à utiliser l’API [!DNL Segmentation Service], consultez les guides des différents points d’entrée pour obtenir des instructions détaillées sur la manière d’effectuer des appels vers les différents points d’entrée du service. Pour en savoir plus sur l’utilisation des segments à l’aide de l’interface utilisateur de [!DNL Experience Platform], consultez le guide d’utilisation [Segmentation](../ui/overview.md).
+

@@ -4,13 +4,10 @@ title: Créer une exécution de flux pour l’ingestion à la demande à l’aid
 description: Découvrez comment créer une exécution de flux pour l’ingestion à la demande à l’aide de l’API Flow Service
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
 TQID: https://experienceleague.adobe.com/SfngohD2hHnDRi4d6uiZxlsMuZKlFTCf3oJG4gfHRDw
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 847
 ht-degree: 10%
@@ -23,7 +20,7 @@ Les exécutions de flux représentent une instance d’exécution de flux. Par e
 
 L’ingestion à la demande vous permet de créer une exécution de flux pour un flux de données donné. Cela permet à vos utilisateurs de créer une exécution de flux, en fonction de paramètres donnés, et de créer un cycle d’ingestion, sans jetons de service. La prise en charge de l’ingestion à la demande est disponible uniquement pour les sources par lots.
 
-Ce tutoriel décrit les étapes à suivre pour utiliser l’ingestion à la demande et créer une exécution de flux à l’aide de l’API [&#128279;](https://developer.adobe.com/experience-platform-apis/references/flow-service).[!DNL Flow Service] 
+Ce tutoriel décrit les étapes à suivre pour utiliser l’ingestion à la demande et créer une exécution de flux à l’aide de l’API ](https://developer.adobe.com/experience-platform-apis/references/flow-service).[[!DNL Flow Service] 
 
 >[!TIP]
 >
@@ -202,3 +199,4 @@ Une réponse réussie renvoie les détails de l’exécution de flux nouvellemen
 ## Surveiller les exécutions de flux
 
 Une fois votre exécution de flux créée, vous pouvez surveiller les données ingérées pour afficher des informations sur les exécutions de flux, l’état d’achèvement et les erreurs. Pour surveiller vos exécutions de flux à l’aide de l’API , consultez le tutoriel sur la [surveillance des flux de données dans l’API](./monitor.md). Pour surveiller vos exécutions de flux à l’aide de l’interface utilisateur d’Experience Platform, consultez le guide sur la [surveillance des flux de données sources à l’aide du tableau de bord de surveillance](../../../dataflows/ui/monitor-sources.md).
+

@@ -4,11 +4,9 @@ description: Découvrez comment créer une connexion source et un flux de donné
 badge: Beta
 exl-id: 580731b9-0c04-4f83-a475-c1890ac5b7cd
 TQID: https://experienceleague.adobe.com/B05a7-7L-2DfqhFv6nfuTHHHSu6oaYVLGAwYgIOP5-o
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 2369
 ht-degree: 48%
@@ -1093,3 +1091,4 @@ Supprimez votre flux de données en adressant une requête DELETE à l’API [!D
 ### Supprimer votre compte
 
 Supprimez votre compte en adressant une requête DELETE à l’API [!DNL Flow Service] et en fournissant l’identifiant de connexion de base du compte que vous souhaitez supprimer. Pour obtenir des exemples d’API complets, consultez le guide sur la [suppression de votre compte source à l’aide de l’API](../../delete.md).
+

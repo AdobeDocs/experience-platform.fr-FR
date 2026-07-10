@@ -6,14 +6,10 @@ description: L’API Query Service permet aux développeurs d’interroger leurs
 role: Developer
 exl-id: 2f4a156b-5623-419a-a9b2-72310f755708
 TQID: https://experienceleague.adobe.com/DFpRizSbGg57vcneMvN-dgiuWVOanbofBLHakEUjAG4
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 404
 ht-degree: 100%
@@ -69,3 +65,4 @@ Maintenant que vous savez quels en-têtes utiliser, vous êtes prêt(e) à comme
 ## Étapes suivantes
 
 Maintenant que vous avez appris à lancer des appels à l’aide de l’API [!DNL Query Service], vous pouvez créer vos propres requêtes non interactives. Pour plus d’informations sur la création de requêtes, veuillez lire le [guide de référence SQL](../sql/overview.md).
+

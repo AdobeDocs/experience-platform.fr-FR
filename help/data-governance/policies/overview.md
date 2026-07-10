@@ -5,22 +5,11 @@ title: Présentation des politiques dʼutilisation des données
 description: Les politiques d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé(e) ou non à effectuer sur des données dans Adobe Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
 TQID: https://experienceleague.adobe.com/nLzYV-Grtp7Ek5mOtCjNAm0Y6qm-mA9wsDV1IXeWsrQ
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: c20d46e7-1c7d-476c-a50e-3961d4dce35f
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: bbbea26f-9621-49eb-9ab8-e06fb3bbce8cid: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: e0eb8757-182f-49f3-94a4-1587d16f5094id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 1236
 ht-degree: 91%
@@ -74,7 +63,7 @@ Voir l’annexe du présent document pour obtenir une liste des [actions marketi
 
 Experience Platform has the ability to share audiences with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager audiences are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
-For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=fr).
+For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
 
 ## Gestion des politiques d’utilisation des données {#manage}
@@ -118,3 +107,4 @@ Le tableau ci-dessous décrit les principales actions marketing prêtes à l’e
 | Personnalisation sur site | Action qui utilise des données pour la personnalisation du contenu sur site. La personnalisation sur site correspond à toutes les données utilisées pour faire des inférences sur les intérêts des utilisateurs et qui servent à sélectionner le contenu ou les publicités diffusés en fonction de ces inférences. |
 | Correspondance de segments | Une action qui utilise des données pour la correspondance de segments Adobe Experience Platform, qui permet à deux utilisateurs Experience Platform ou plus d’échanger des données d’audience. En activant les politiques qui font référence à cette action, vous pouvez limiter les données utilisées pour la Correspondance de segments. Par exemple, si la politique de base « Limiter le partage des données » est activée, les données avec un [libellé C11](../labels/reference.md#c11) ne peuvent pas être utilisées pour la correspondance de segments. |
 | Personnalisation d’identité unique | Action qui nécessite l’utilisation d’une identité unique à des fins de personnalisation au lieu de regrouper des identités provenant de plusieurs sources. |
+

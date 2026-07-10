@@ -3,11 +3,9 @@ title: Créer une connexion de base Google Cloud Storage à l’aide de l’API 
 description: Découvrez comment connecter Adobe Experience Platform à un compte de stockage dans le cloud Google à l’aide de l’API Flow Service.
 exl-id: 321d15eb-82c0-45a7-b257-1096c6db6b18
 TQID: https://experienceleague.adobe.com/4CigxlZOzCUIaLcXv7jV1fp-qxCZmdrfxPY-I9tIzPE
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 572
 ht-degree: 38%
@@ -115,3 +113,4 @@ Une réponse réussie renvoie les détails de la connexion nouvellement créée,
 ## Étapes suivantes
 
 En suivant ce tutoriel, vous avez créé une connexion [!DNL Google Cloud Storage] à l’aide d’API et obtenu un identifiant unique dans le cadre du corps de la réponse. Vous pouvez utiliser cet identifiant de connexion pour [explorer les espaces de stockage dans le cloud à l’aide de l’API Flow Service](../../explore/cloud-storage.md).
+

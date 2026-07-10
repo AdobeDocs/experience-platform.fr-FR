@@ -6,11 +6,9 @@ type: Tutorial
 description: Découvrez comment connecter  [!DNL IBM DB2] à Adobe Experience Platform à l’aide de l’API Flow Service.
 exl-id: 83c1dbe6-975f-4e3b-a7bf-166eb5106dd2
 TQID: https://experienceleague.adobe.com/A--c3ExvyPuWrLiFnVP-QRU1a6zWDebt40xwRE8hUVo
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 474
 ht-degree: 36%
@@ -21,7 +19,7 @@ ht-degree: 36%
 
 >[!NOTE]
 >
->Le connecteur [!DNL IBM DB2] d’IBM est en version bêta. Consultez la [&#x200B; Présentation des sources &#x200B;](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
+>Le connecteur [!DNL IBM DB2] d’IBM est en version bêta. Consultez la [ Présentation des sources ](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
@@ -115,5 +113,6 @@ Une réponse réussie renvoie les détails de la connexion nouvellement créée,
 Ce tutoriel vous a permis de créer une connexion de base [!DNL IBM DB2] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants :
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer les données de la base de données dans Experience Platform à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/database-nosql.md)
+* [Créez un flux de données pour importer les données de la base de données dans Experience Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/database-nosql.md)
+
 

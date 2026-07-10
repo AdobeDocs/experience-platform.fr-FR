@@ -4,16 +4,11 @@ description: Vous pouvez vous abonner à des alertes lors de la création d’un
 title: S’abonner aux alertes de destination contextuelles
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
 TQID: https://experienceleague.adobe.com/GMeMcADJlZhf8aj0rjYZr32wzHoL-BeDF1xfT-X8fFw
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 942
 ht-degree: 14%
@@ -128,3 +123,4 @@ Une fenêtre pop-up s’affiche, vous fournissant une liste des alertes de desti
 ## Étapes suivantes {#next-steps}
 
 Vous pouvez désormais vous abonner à des alertes contextuelles pour vos flux de données de destination. Pour plus d’informations, consultez le [guide de l’interface utilisateur des alertes](../../observability/alerts/ui.md).
+

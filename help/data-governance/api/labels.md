@@ -6,13 +6,10 @@ description: Découvrez la façon de gérer les libellés dʼutilisation des don
 role: Developer
 exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
 TQID: https://experienceleague.adobe.com/Qy-H-Grw4eQkt4o3pECd1qL7eSnVulXKFRt1glex1yw
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 543
 ht-degree: 88%
@@ -240,3 +237,4 @@ Une réponse réussie renvoie les détails du libellé personnalisé, avec le co
 ## Étapes suivantes
 
 Ce guide couvre lʼutilisation du point d’entrée `/labels` dans lʼAPI Policy Service. Pour obtenir des instructions détaillées sur lʼapplication de libellés aux jeux de données et aux champs, consultez le [guide de lʼAPI des libellés des jeux de données](../labels/dataset-api.md).
+

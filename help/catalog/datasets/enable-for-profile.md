@@ -5,20 +5,12 @@ type: Tutorial
 description: Ce tutoriel vous explique comment activer un jeu de données à utiliser avec le profil client en temps réel et le service d’identités à l’aide des API Adobe Experience Platform.
 exl-id: a115e126-6775-466d-ad7e-ee36b0b8b49c
 TQID: https://experienceleague.adobe.com/DIVgFHnU3IqfwzblXJFctZOkzvjOHRnk-dbB6VDXrDY
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2:
-  - id: e87e2d37-4b79-43e9-ad8e-53009e3f83f2
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: e87e2d37-4b79-43e9-ad8e-53009e3f83f2
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 1079
 ht-degree: 92%
@@ -240,3 +232,4 @@ Lors du premier chargement de données vers un nouveau jeu de données ou dans l
 ## Confirmer l’ingestion des données par le Service d’identités {#confirm-data-ingest-by-identity-service}
 
 Chaque fragment de données ingéré contenant plusieurs identités crée un lien dans votre graphique d’identités privé. Pour plus d’informations sur les graphiques d’identités et sur l’accès aux données d’identité, veuillez commencer par lire la [présentation du service d’identités](../../identity-service/home.md).
+

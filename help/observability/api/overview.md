@@ -5,13 +5,10 @@ title: Guide de l’API Observability Insights
 description: Observability Insights est une API RESTful qui permet aux développeurs d’exposer les mesures d’observabilité clés dans Adobe Experience Platform. Ces mesures fournissent des informations sur les statistiques d’utilisation d’Experience Platform, les contrôles d’intégrité des services Experience Platform, les tendances historiques et les indicateurs de performances de diverses fonctionnalités d’Experience Platform.
 exl-id: 3dee20e2-0551-43db-ba89-bc049b56af08
 TQID: https://experienceleague.adobe.com/Kt1Q49-Sd0debDazehwRR2aoXEKm-xmZAyIWGXL0xmE
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 162
 ht-degree: 13%
@@ -27,3 +24,4 @@ Pour afficher tous les points d’entrée et opérations CRUD disponibles, consu
 ## Mesures
 
 Les mesures d’observabilité fournissent des informations sur les statistiques d’utilisation, les tendances historiques et les indicateurs de performances des différentes fonctionnalités de Adobe Experience Platform. Pour savoir comment récupérer des mesures à l’aide de l’API, consultez le [guide des points d’entrée des mesures](./metrics.md).
+

@@ -6,14 +6,10 @@ type: Tutorial
 description: Ce tutoriel utilise l’API de machine learning d’Adobe AI pour créer un moteur, également appelé recette dans l’interface utilisateur.
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
 TQID: https://experienceleague.adobe.com/4J5oeJraiqqZfne9eV12TJfy2p1ANhDo990ViyTgC7s
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 1028
 ht-degree: 49%
@@ -216,3 +212,4 @@ Une réponse réussie affiche un payload JSON contenant des informations sur le 
 ## Étapes suivantes {#next-steps}
 
 Vous avez créé un moteur à l’aide de l’API et avez obtenu un identifiant de moteur unique dans le corps de la réponse. Vous pouvez utiliser cet identifiant de moteur dans le tutoriel suivant où vous apprendrez à [créer, former et évaluer un modèle à l’aide de l’API](./train-evaluate-model-api.md).
+

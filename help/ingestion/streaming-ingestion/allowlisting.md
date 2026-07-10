@@ -5,13 +5,10 @@ hide: true
 badge: Beta
 exl-id: 6df6745b-c166-4eb8-ae0b-5575a57dace1
 TQID: https://experienceleague.adobe.com/C-oA-ak1H5hXM-8fIlAtksymLvlG5gw4dj7fAy8YQzA
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 474
 ht-degree: 5%
@@ -47,7 +44,7 @@ La fonction de filtrage des adresses IP fonctionne comme suit :
 
 Suivez les étapes ci-dessous pour activer les adresses IP qui placent sur la liste autorisée pour votre organisation :
 
-1. Téléchargez et remplissez le formulaire [adresse IP en cours de &#x200B;](../images/assets/ip_allowlisting_aep.xlsx.zip).
+1. Téléchargez et remplissez le formulaire [adresse IP en cours de ](../images/assets/ip_allowlisting_aep.xlsx.zip).
 2. Ouvrez un ticket d’assistance et enregistrez l’objet en tant que **AEP DCS et ingestion par flux - Demande de Liste autorisée d’IP**. Joindre le formulaire complété à ce ticket.
 3. Après l’envoi de votre ticket, l’assistance clientèle d’Adobe transmettra votre demande à l’ingénierie.
 4. Les ingénieurs activent et confirment la configuration.
@@ -78,3 +75,4 @@ Non. Ils sont ouverts jusqu’à ce que vous fournissiez des mappages d’adress
 ### Puis-je envoyer uniquement des adresses IP mises à jour lorsque ma place sur la liste autorisée change ?
 
 Non. Vous devez toujours envoyer la liste complète des mappages de sandbox et d’adresses IP. Les mises à jour partielles (incrémentielles) ne sont pas acceptées.
+

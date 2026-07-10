@@ -5,24 +5,12 @@ description: Découvrez comment utiliser l’API Flow Service pour exporter des 
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
 TQID: https://experienceleague.adobe.com/aWGM9NXWk4RQKehhzDckd8o1-kEuokmWy9lj5qEHPhQ
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 5107
 ht-degree: 10%
@@ -35,7 +23,7 @@ Utilisez les fonctionnalités améliorées d’exportation de fichiers pour acc�
 
 * [Options de dénomination de fichier](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names) supplémentaires.
 * Possibilité de définir des en-têtes de fichier personnalisés dans vos fichiers exportés via l’[étape de mappage améliorée](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
-* Possibilité de sélectionner le [&#x200B; type de fichier &#x200B;](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) fichier exporté.
+* Possibilité de sélectionner le [ type de fichier ](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) fichier exporté.
 * [Possibilité de personnaliser le formatage des fichiers de données CSV exportés](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 Cette fonctionnalité est prise en charge par les six cartes de stockage dans le cloud répertoriées ci-dessous :
@@ -75,9 +63,9 @@ Les sections suivantes apportent des informations supplémentaires dont vous aur
 
 ### Autorisations nécessaires {#permissions}
 
-Pour exporter des profils, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [&#128279;](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+Pour exporter des profils, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
-Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [&#128279;](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+Pour exporter des *identités*, vous devez disposer de l’autorisation de contrôle d’accès **[!UICONTROL Afficher le graphique d’identités]** [](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 ### Lecture d&#39;exemples d&#39;appels API {#reading-sample-api-calls}
 
@@ -3293,7 +3281,7 @@ Notez l’identifiant du flux de données dans la réponse. Cet identifiant sera
 
 ### Ajouter des audiences à l’exportation {#add-audiences}
 
-Au cours de cette étape, vous pouvez également sélectionner les audiences que vous souhaitez exporter vers la destination. Pour obtenir des informations détaillées sur cette étape et le format de requête permettant d’ajouter une audience au flux de données, consultez les exemples dans la section [&#x200B; Mettre à jour un flux de données de destination &#x200B;](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById) de la documentation de référence de l’API.
+Au cours de cette étape, vous pouvez également sélectionner les audiences que vous souhaitez exporter vers la destination. Pour obtenir des informations détaillées sur cette étape et le format de requête permettant d’ajouter une audience au flux de données, consultez les exemples dans la section [ Mettre à jour un flux de données de destination ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById) de la documentation de référence de l’API.
 
 
 ## Configurer le mappage des attributs et des identités {#attribute-and-identity-mapping}
@@ -4556,7 +4544,7 @@ Pour ajouter une [action marketing](/help/data-governance/api/marketing-actions.
 
 >[!TIP]
 >
->Avant d’ajouter une action marketing à un flux de données, vous pouvez rechercher vos actions marketing de base et personnalisées existantes. Affichez [&#x200B; comment récupérer une liste d’actions marketing existantes &#x200B;](/help/data-governance/api/marketing-actions.md#list).
+>Avant d’ajouter une action marketing à un flux de données, vous pouvez rechercher vos actions marketing de base et personnalisées existantes. Affichez [ comment récupérer une liste d’actions marketing existantes ](/help/data-governance/api/marketing-actions.md#list).
 
 +++Ajouter une action marketing à un flux de données de destination - Requête
 
@@ -4906,3 +4894,4 @@ Vous avez réussi à connecter Experience Platform à l’une de vos destination
 * [Présentation des destinations](../home.md)
 * [Présentation du catalogue des destinations](../catalog/overview.md)
 * [Mettre à jour des flux de données de destination à l’aide de l’API Flow Service](../api/update-destination-dataflows.md)
+

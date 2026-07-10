@@ -6,11 +6,9 @@ description: Vous pouvez récupérer une liste des types de sandbox pris en char
 role: Developer
 exl-id: eb5e1b44-37f5-4ed5-98f5-ac8db8792c7d
 TQID: https://experienceleague.adobe.com/XMFMjrBV82u5kZJwQ2HbjNs3jRMTlftVFwR9RFUUB10
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 164
 ht-degree: 70%
@@ -57,3 +55,4 @@ Une réponse réussie renvoie une liste des types de sandbox pris en charge pour
     ]
 }
 ```
+

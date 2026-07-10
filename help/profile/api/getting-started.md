@@ -6,19 +6,12 @@ description: Le guide de prise en main de l’API Profile décrit les concepts c
 role: Developer
 exl-id: 7e30610a-a7e7-43ab-a45d-fd84ef6e36ef
 TQID: https://experienceleague.adobe.com/RiJCMvzj44PaQGtgPK3bSUi9qax78MVieL-G5WLB4-Y
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2:
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 412
 ht-degree: 52%
@@ -62,3 +55,4 @@ Toutes les requêtes ayant un payload dans le corps de la requête (notamment le
 ## Étapes suivantes
 
 Pour commencer à effectuer des appels à l’aide de l’API [!DNL Real-Time Customer Profile], sélectionnez l’un des guides de point d’entrée disponibles.
+

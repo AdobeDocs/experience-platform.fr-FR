@@ -5,14 +5,10 @@ title: Explorer un système CRM à l’aide de l’API Flow Service
 description: Ce tutoriel utilise l’API Flow Service pour explorer les systèmes CRM.
 exl-id: 9a8c553a-a93d-4539-a9d2-5f76a3927d92
 TQID: https://experienceleague.adobe.com/MoWIxCr67hdscc7aclhAL3sF4GBl2yK3tGhIp4pCCkg
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 586
 ht-degree: 38%
@@ -180,3 +176,4 @@ Une réponse réussie renvoie la structure d’un tableau. Les détails concerna
 ## Étapes suivantes
 
 En suivant ce tutoriel, vous avez exploré votre système CRM, trouvé le chemin d’accès à la table que vous souhaitez importer dans [!DNL Experience Platform] et obtenu des informations sur sa structure. Vous pouvez utiliser ces informations dans le tutoriel suivant pour [collecter des données à partir de votre système CRM et les importer dans Experience Platform](../collect/crm.md).
+
