@@ -19,9 +19,9 @@ role_v2:
 topic_v2:
   - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 73387ee674dac6ba2ee167c66dbfda52a4b48466
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
-source-wordcount: 1629
+source-wordcount: 1622
 ht-degree: 47%
 
 ---
@@ -41,7 +41,7 @@ Ce tutoriel nécessite une compréhension pratique des différents services [!DN
 
 ### En-têtes requis
 
-Ce tutoriel nécessite également que vous ayez suivi le [&#x200B; tutoriel sur l’authentification &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) pour passer avec succès des appels aux API [!DNL Experience Platform]. Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
+Ce tutoriel nécessite également que vous ayez suivi le [&#x200B; tutoriel sur l’authentification &#x200B;](/help/landing/api-authentication.md) pour passer avec succès des appels aux API [!DNL Experience Platform]. Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
@@ -239,7 +239,7 @@ Vous trouverez des informations plus détaillées sur l’utilisation de ce poin
 
 ## Étapes suivantes
 
-Une fois l’exportation terminée, vos données sont disponibles dans le [!DNL Data Lake] dans [!DNL Experience Platform]. Vous pouvez ensuite utiliser l’[[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) pour accéder aux données à l’aide du `batchId` associé à l’exportation. Selon la taille de la définition de segment, les données peuvent être en blocs et le lot peut se composer de plusieurs fichiers.
+Une fois l’exportation terminée, vos données sont disponibles dans le [!DNL Data Lake] dans [!DNL Experience Platform]. Vous pouvez ensuite utiliser l’[[!DNL Data Access API]](https://developer.adobe.com/experience-platform-apis/references/data-access) pour accéder aux données à l’aide du `batchId` associé à l’exportation. Selon la taille de la définition de segment, les données peuvent être en blocs et le lot peut se composer de plusieurs fichiers.
 
 Pour obtenir des instructions détaillées sur l’utilisation de l’API [!DNL Data Access] pour accéder aux fichiers par lot et les télécharger, suivez le tutoriel [Data Access](../../data-access/tutorials/dataset-data.md).
 

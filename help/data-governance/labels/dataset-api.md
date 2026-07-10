@@ -14,7 +14,7 @@ role_v2:
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-source-git-commit: dc73fd9f2c4d1cef8b38e6a0fb0b627ff29d1f19
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 1280
 ht-degree: 81%
@@ -23,7 +23,7 @@ ht-degree: 81%
 
 # Gestion des libellés dʼutilisation des données pour les jeux de données à lʼaide dʼAPI
 
-[[!DNL Dataset Service API]](https://www.adobe.io/experience-platform-apis/references/dataset-service/) vous permet dʼappliquer et de modifier des libellés dʼutilisation pour les jeux de données. LʼAPI fait partie des fonctionnalités de catalogue de données dʼAdobe Experience Platform, mais est distinct de lʼAPI [!DNL Catalog Service] qui gère les métadonnées du jeu de données.
+[[!DNL Dataset Service API]](https://developer.adobe.com/experience-platform-apis/references/dataset-service) vous permet dʼappliquer et de modifier des libellés dʼutilisation pour les jeux de données. LʼAPI fait partie des fonctionnalités de catalogue de données dʼAdobe Experience Platform, mais est distinct de lʼAPI [!DNL Catalog Service] qui gère les métadonnées du jeu de données.
 
 >[!IMPORTANT]
 >

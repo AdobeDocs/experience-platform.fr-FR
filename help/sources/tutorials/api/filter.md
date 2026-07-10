@@ -9,10 +9,10 @@ feature_v2:
   - id: c132d929-fa62-4271-803e-b823be07b914
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
 workflow-type: tm+mt
 source-wordcount: 2089
-ht-degree: 13%
+ht-degree: 12%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 13%
 >* [[!DNL Salesforce]](../../connectors/crm/salesforce.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-Lisez ce guide pour savoir comment filtrer les données au niveau des lignes pour une source à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lisez ce guide pour savoir comment filtrer les données au niveau des lignes pour une source à l’aide de l’[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Commencer
 
