@@ -5,9 +5,12 @@ title: Créer un flux de données pour une campagne Mailchimp à l’aide de l�
 description: Découvrez comment connecter Adobe Experience Platform à une campagne MailChimp à l’aide de l’API Flow Service.
 exl-id: fd4821c7-6fe1-4cad-8e13-3549dbe0ce98
 TQID: https://experienceleague.adobe.com/PhdaJPMFn-469uG9LDz1AS1DrEAXfjMWKuKY0cT6sD8
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 1970

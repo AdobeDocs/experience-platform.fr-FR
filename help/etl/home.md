@@ -5,11 +5,21 @@ title: Développement d’intégrations ETL pour Adobe Experience Platform
 description: Le guide d’intégration ETL décrit les étapes générales de la création de connecteurs sécurisés et haute performance pour Experience Platform et de l’ingestion de données dans Experience Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
 TQID: https://experienceleague.adobe.com/omYKrWwAqvXkVfI-EDLUXBRbAxYXzxVybnIrHFhFwMo
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6fid: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2: id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2:
+  - id: c3d7a45c-ad17-435d-8b71-882abbe8f27e
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
 source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 4161
@@ -527,7 +537,7 @@ Vous trouverez des détails sur le filtrage des lots dans le [tutoriel portant s
 
 ### Extraction de fichiers d’un lot
 
-Une fois que vous disposez de l’identifiant du lot que vous recherchez (`{BATCH_ID}`), il est possible de récupérer une liste de fichiers appartenant à un lot en particulier via l’[[!DNL Data Access API]](https://developer.adobe.com/experience-platform-apis/references/data-access).  Pour plus d’informations sur ce processus, reportez-vous au tutoriel portant sur l’[[!DNL Data Access] ](../data-access/tutorials/dataset-data.md).
+Une fois que vous disposez de l’identifiant du lot que vous recherchez (`{BATCH_ID}`), il est possible de récupérer une liste de fichiers appartenant à un lot en particulier via l’[[!DNL Data Access API]](https://developer.adobe.com/experience-platform-apis/references/data-access).  Pour plus d’informations sur ce processus, reportez-vous au tutoriel portant sur l’[[!DNL Data Access] &#x200B;](../data-access/tutorials/dataset-data.md).
 
 **Requête**
 
@@ -553,7 +563,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{FILE_ID}" \
   -H "x-api-key: {API_KEY}"
 ```
 
-La réponse peut pointer vers un seul fichier ou vers un répertoire. Vous trouverez des informations détaillées sur chaque option dans le tutoriel portant sur l’[[!DNL Data Access] ](../data-access/tutorials/dataset-data.md).
+La réponse peut pointer vers un seul fichier ou vers un répertoire. Vous trouverez des informations détaillées sur chaque option dans le tutoriel portant sur l’[[!DNL Data Access] &#x200B;](../data-access/tutorials/dataset-data.md).
 
 ### Accès au contenu du fichier
 

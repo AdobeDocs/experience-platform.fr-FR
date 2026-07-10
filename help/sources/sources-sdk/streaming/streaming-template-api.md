@@ -4,9 +4,12 @@ description: Découvrez comment importer des données de flux d’une source ver
 exl-id: a06384a2-cd99-456d-9f00-babcf3f7b7d9
 badge: Beta
 TQID: https://experienceleague.adobe.com/DiXcmlQwz-W6m-GltTOmdkg5lWikTklEzvL0R5Stpfo
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 1732

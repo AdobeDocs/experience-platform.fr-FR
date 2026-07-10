@@ -6,9 +6,12 @@ description: Les politiques de gouvernance des données sont des règles adopté
 role: Developer
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
 TQID: https://experienceleague.adobe.com/drRzpVXCNSmAKAM-rzNng6NOtjkFH83whP0IxCkFaiE
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
 source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 1873

@@ -4,8 +4,10 @@ description: Découvrez comment connecter Adobe Experience Platform à Snowflake
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3fc225a4-746c-4a91-aa77-bbeb091ec364
 TQID: https://experienceleague.adobe.com/JO6g-2XHCtkl4-9uLmI3uFsJ0NXDv5XdHcI-HVuYGK4
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 886
@@ -20,7 +22,7 @@ ht-degree: 22%
 >
 > La source de diffusion en continu [!DNL Snowflake] est disponible dans l’API pour les utilisateurs qui ont acheté Real-Time Customer Data Platform Ultimate.
 
-Ce tutoriel décrit les étapes à suivre pour connecter et diffuser des données de votre compte [!DNL Snowflake] vers Adobe Experience Platform à l’aide de l’API [[!DNL Flow Service] ](<https://developer.adobe.com/experience-platform-apis/references/flow-service>).
+Ce tutoriel décrit les étapes à suivre pour connecter et diffuser des données de votre compte [!DNL Snowflake] vers Adobe Experience Platform à l’aide de l’API [[!DNL Flow Service] &#x200B;](<https://developer.adobe.com/experience-platform-apis/references/flow-service>).
 
 ## Prise en main
 

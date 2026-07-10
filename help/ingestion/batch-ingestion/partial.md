@@ -5,9 +5,13 @@ title: Aperçu de l’ingestion par lots partielle
 description: Ce document fournit un tutoriel pour la gestion de l’ingestion par lots partielle.
 exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
 TQID: https://experienceleague.adobe.com/6-IqkSaGjRlvaIB5Ju1b7lmpGTSlRqBn8-SRQrpS23M
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 1275
@@ -135,7 +139,7 @@ Suivez les étapes ci-dessous pour activer les diagnostics d’ingestion et d’
 
 ### Récupérer les détails du flux
 
-Pour récupérer vos configurations de flux de données, envoyez une requête GET au point d’entrée `/flows/{FLOW_ID}` et indiquez l’identifiant de votre flux de données. Pour plus d’informations sur la récupération des détails du flux de données, reportez-vous au guide [Mettre à jour les flux de données à l’aide de l’API [!DNL Flow Service]  ](../../sources/tutorials/api/update-dataflows.md).
+Pour récupérer vos configurations de flux de données, envoyez une requête GET au point d’entrée `/flows/{FLOW_ID}` et indiquez l’identifiant de votre flux de données. Pour plus d’informations sur la récupération des détails du flux de données, reportez-vous au guide [Mettre à jour les flux de données à l’aide de l’API [!DNL Flow Service]  &#x200B;](../../sources/tutorials/api/update-dataflows.md).
 
 Veillez à enregistrer la valeur du champ `etag` renvoyé dans la réponse. Cela est nécessaire pour que la demande de mise à jour garantisse la cohérence des versions.
 

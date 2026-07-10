@@ -4,9 +4,12 @@ description: Le document suivant décrit les étapes à suivre pour tester et v�
 exl-id: 2ae0c3ad-1501-42ab-aaaa-319acea94ec2
 badge: Beta
 TQID: https://experienceleague.adobe.com/HeRMiAbZSKiuZmt-oZkzEAbS6R03uikBbaJZMpP1yyY
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 1288
@@ -29,7 +32,7 @@ Le document suivant décrit les étapes à suivre pour tester et déboguer votre
 * Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Experience Platform, consultez le guide [Prise en main des API Experience Platform](../../../landing/api-guide.md).
 * Pour plus d’informations sur la génération de vos informations d’identification pour les API Experience Platform, consultez le tutoriel sur l’[authentification et accès aux API Experience Platform](../../../landing/api-authentication.md).
 * Pour plus d’informations sur la configuration de [!DNL Postman] pour les API Experience Platform, consultez le tutoriel sur [configuration de Developer Console et  [!DNL Postman]](../../../landing/postman.md).
-* Pour faciliter votre processus de test et de débogage, téléchargez ici l’environnement et la collection de vérification des sources en libre-service ](../assets/sdk-verification.zip) et suivez les étapes décrites ci-dessous.[
+* Pour faciliter votre processus de test et de débogage, téléchargez ici l’environnement et la collection de vérification des sources en libre-service [&#128279;](../assets/sdk-verification.zip) et suivez les étapes décrites ci-dessous.
 
 ## Tester votre source à l’aide de l’API
 
@@ -84,7 +87,7 @@ L’étape [!UICONTROL Ajouter des données] s’affiche. Pour tester si votre s
 
 La page [!UICONTROL Détails du flux de données] vous permet de choisir si vous souhaitez utiliser un jeu de données existant ou un nouveau jeu de données. Au cours de ce processus, vous pouvez également configurer vos données à ingérer dans le profil et activer des paramètres tels que [!UICONTROL Diagnostics d’erreur] et [!UICONTROL Ingestion partielle].
 
-Pour les tests, sélectionnez **[!UICONTROL Nouveau jeu de données]** et indiquez un nom de jeu de données de sortie. Au cours de cette étape, vous pouvez également fournir une description facultative pour ajouter des informations supplémentaires à votre jeu de données. Sélectionnez ensuite un schéma à mapper à l’aide de l’option [!UICONTROL  Recherche avancée ] ou en faisant défiler la liste des schémas existants dans le menu déroulant. Une fois que vous avez sélectionné un schéma, saisissez un nom et une description pour votre flux de données.
+Pour les tests, sélectionnez **[!UICONTROL Nouveau jeu de données]** et indiquez un nom de jeu de données de sortie. Au cours de cette étape, vous pouvez également fournir une description facultative pour ajouter des informations supplémentaires à votre jeu de données. Sélectionnez ensuite un schéma à mapper à l’aide de l’option [!UICONTROL &#x200B; Recherche avancée &#x200B;] ou en faisant défiler la liste des schémas existants dans le menu déroulant. Une fois que vous avez sélectionné un schéma, saisissez un nom et une description pour votre flux de données.
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 

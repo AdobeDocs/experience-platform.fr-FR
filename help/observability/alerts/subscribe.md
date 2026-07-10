@@ -5,9 +5,13 @@ description: Ce document décrit la procédure à suivre pour sʼabonner aux not
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
 TQID: https://experienceleague.adobe.com/YbSl4WsK5jaiQOq3bWBBBYX4AKA9WDTSI0Ss0CkEamU
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 805
@@ -91,7 +95,7 @@ Dans l’écran suivant, indiquez le nom et la description de l’enregistrement
 
 ![](../images/notifications/registration-details.png)
 
-Plus bas sur le même écran, sous la section [!UICONTROL Comment recevoir des événements ], vous pouvez éventuellement configurer comment vous souhaitez recevoir les événements. **[!UICONTROL Webhook]** vous permet de fournir une adresse webhook personnalisée pour recevoir les événements, tandis que **[!UICONTROL l’action Runtime]** vous permet de faire de même à l’aide de [Adobe I/O Runtime](https://developer.adobe.com/app-builder/docs/intro_and_overview/).
+Plus bas sur le même écran, sous la section [!UICONTROL Comment recevoir des événements &#x200B;], vous pouvez éventuellement configurer comment vous souhaitez recevoir les événements. **[!UICONTROL Webhook]** vous permet de fournir une adresse webhook personnalisée pour recevoir les événements, tandis que **[!UICONTROL l’action Runtime]** vous permet de faire de même à l’aide de [Adobe I/O Runtime](https://developer.adobe.com/app-builder/docs/intro_and_overview/).
 
 Pour ce tutoriel, sélectionnez **[!UICONTROL Webhook]** et fournissez l’URL du webhook que vous avez créé précédemment. Une fois que vous avez terminé, sélectionnez **[!UICONTROL Enregistrer les événements configurés]** pour terminer l’enregistrement de l’événement.
 
