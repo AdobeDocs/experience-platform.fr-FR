@@ -10,7 +10,7 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 346
 ht-degree: 90%
@@ -76,3 +76,4 @@ Vous pouvez confirmer la suppression en tentant d’adresser une requête de rec
 Vous êtes arrivé au bout de ce tutoriel, félicitations ! Grâce à celui-ci, vous avez réussi à utiliser l’API [!DNL Flow Service] pour supprimer des comptes existants.
 
 Pour savoir comment effectuer ces opérations à l’aide de l’interface utilisateur, consultez le tutoriel [Supprimer des comptes dans l’interface utilisateur](../../tutorials/ui/delete-accounts.md).
+

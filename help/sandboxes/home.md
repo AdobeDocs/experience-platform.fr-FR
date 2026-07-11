@@ -25,7 +25,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 993
 ht-degree: 78%
@@ -103,3 +103,4 @@ L’API Sandbox vous permet de gérer les sandbox à l’aide des opérations de
 En lisant ce document, vous avez pris connaissance des concepts fondamentaux concernant les sandbox dans Experience Platform. Pour obtenir des instructions détaillées sur la gestion des sandbox, reportez-vous au [guide d’utilisation](ui/overview.md) pour l’interface utilisateur ou au [guide de développement](./api/getting-started.md) pour l’API.
 
 Bien que les sandbox constituent un outil précieux permettant d’isoler les environnements Experience Platform pour votre équipe de développement, vous pouvez également gérer un contrôle d’accès plus granulaire à l’aide de Adobe Admin Console. Pour plus d’informations, consultez la [présentation du contrôle d’accès](../access-control/home.md).
+

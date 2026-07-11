@@ -26,7 +26,7 @@ topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 5563
 ht-degree: 59%
@@ -893,3 +893,4 @@ Le tableau suivant fournit des codes d’erreur HTTP et leurs causes possibles.
 | 400 | Mauvaise requête | Requête malformée ou illégale |
 | 401 | Échec de l’authentification | Jeton d’authentification non valide |
 | 500 | Erreur interne du serveur | Échec du système interne |
+

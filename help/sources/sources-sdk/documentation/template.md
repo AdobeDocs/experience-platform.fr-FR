@@ -3,7 +3,7 @@ keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;c
 title: Modèle de libre-service de documentation
 description: Découvrez comment connecter Adobe Experience Platform à YOURSOURCE à l’aide de l’API Flow Service.
 exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: '2176'
 ht-degree: 50%

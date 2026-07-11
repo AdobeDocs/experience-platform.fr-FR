@@ -25,7 +25,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 940
 ht-degree: 96%
@@ -1334,3 +1334,4 @@ curl -X GET \
 **Réponse**
 
 Une réponse réussie renvoie un tableau des versions précédentes du package d’extension. Un exemple de réponse a été omis pour l’espace.
+

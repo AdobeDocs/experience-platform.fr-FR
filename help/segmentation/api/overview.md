@@ -14,7 +14,7 @@ subfeature_v2:
   - id: d1823595-9241-4128-8a33-e4ac3bf08773
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 621
 ht-degree: 4%
@@ -80,3 +80,4 @@ La recherche de segments permet de rechercher des champs contenus dans différen
 ## Étapes suivantes
 
 Pour commencer à utiliser l’API [!DNL Segmentation Service], consultez les guides des différents points d’entrée pour obtenir des instructions détaillées sur la manière d’effectuer des appels vers les différents points d’entrée du service. Pour en savoir plus sur l’utilisation des segments à l’aide de l’interface utilisateur de [!DNL Experience Platform], consultez le guide d’utilisation [Segmentation](../ui/overview.md).
+

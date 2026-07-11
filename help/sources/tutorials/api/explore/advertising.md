@@ -9,7 +9,7 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 510
 ht-degree: 14%
@@ -176,3 +176,4 @@ Une réponse réussie renvoie la structure d’un tableau. Les détails concerna
 ## Étapes suivantes
 
 En suivant ce tutoriel, vous avez exploré votre système publicitaire, trouvé le chemin du tableau que vous souhaitez importer dans [!DNL Experience Platform] et obtenu des informations sur sa structure. Vous pouvez utiliser ces informations dans le tutoriel suivant pour [collecter des données à partir de votre système publicitaire et les importer dans Experience Platform](../collect/advertising.md).
+

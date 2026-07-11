@@ -10,7 +10,7 @@ feature_v2:
   - id: c132d929-fa62-4271-803e-b823be07b914
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 712
 ht-degree: 14%
@@ -176,3 +176,4 @@ L’[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-ap
 ## Étapes suivantes
 
 En suivant ce tutoriel, vous avez exploré votre système de stockage dans le cloud, trouvé le chemin d’accès au fichier que vous souhaitez importer dans [!DNL Experience Platform] et consulté sa structure. Vous pouvez utiliser ces informations dans le tutoriel suivant pour [collecter des données à partir de votre espace de stockage dans le cloud et les importer dans Experience Platform](../collect/cloud-storage.md).
+

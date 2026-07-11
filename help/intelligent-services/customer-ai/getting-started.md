@@ -22,7 +22,7 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 589
 ht-degree: 45%
@@ -67,3 +67,4 @@ Ce guide fournit des exemples d’appels API pour démontrer comment formater vo
 ## Étapes suivantes
 
 Une fois les étapes décrites dans le document ci-dessus terminées, consultez la documentation [Entrée et Sortie](./data-requirements.md). Ce document donne un bref aperçu des types de données utilisés et générés dans l’IA dédiée aux clients.
+

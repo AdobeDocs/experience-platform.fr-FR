@@ -15,7 +15,7 @@ subfeature_v2:
   - id: d1823595-9241-4128-8a33-e4ac3bf08773
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 902
 ht-degree: 8%
@@ -208,3 +208,4 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/{AUDIENCE_
 Une fois que vous avez confirmé que l’audience externe a bien été ingérée, vous pouvez la voir dans Audience Portal et l’utiliser dans les services en aval tels que les destinations.
 
 Pour plus d’informations sur Audience Portal, consultez le [Guide de l’interface utilisateur d’Audience Portal](/help/segmentation/ui/audience-portal.md). Pour plus d’informations sur les destinations, consultez la [présentation des destinations](/help/destinations/home.md).
+

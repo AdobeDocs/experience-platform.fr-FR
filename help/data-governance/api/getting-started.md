@@ -16,7 +16,7 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 439
 ht-degree: 95%
@@ -69,3 +69,4 @@ Les ressources `core` sont celles définies et gérées par Adobe, tandis que le
 ## Étapes suivantes
 
 Pour commencer à effectuer des appels à l’aide de l’API Policy Service, sélectionnez l’un des guides de point d’entrée disponibles.
+

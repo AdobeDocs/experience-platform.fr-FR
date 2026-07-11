@@ -11,7 +11,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 575
 ht-degree: 41%
@@ -191,3 +191,4 @@ Une réponse réussie renvoie la structure de la table spécifiée. Les détails
 ## Étapes suivantes
 
 En suivant ce tutoriel, vous avez exploré votre système de paiements, trouvé le chemin d’accès à la table que vous souhaitez ingérer dans [!DNL Experience Platform] et obtenu des informations sur sa structure. Vous pouvez utiliser ces informations dans le tutoriel suivant pour [collecter des données à partir de votre système de paiements et les importer dans Experience Platform](../collect/payments.md).
+

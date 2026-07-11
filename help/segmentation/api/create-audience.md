@@ -16,7 +16,7 @@ role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 271
 ht-degree: 35%
@@ -105,3 +105,4 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations sur l’au
 | `id` | Chaîne | L’identifiant généré par le système pour l’audience. |
 | `name` | Chaîne | Nom de l’audience que vous avez créée. |
 | `audienceId` | Chaîne | Identifiant fourni en externe de l’audience que vous avez créée. |
+

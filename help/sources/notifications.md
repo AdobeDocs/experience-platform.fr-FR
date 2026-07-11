@@ -11,7 +11,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 786
 ht-degree: 15%
@@ -336,3 +336,4 @@ Des erreurs d’ingestion peuvent se produire lorsque les données sont copiées
 | ---------- | ----------- |
 | `CONNECTOR-1001-500` | Une erreur s’est produite lors de la copie des données à partir d’une source. |
 | `CONNECTOR-2001-500` | Une erreur s’est produite lors du traitement des données copiées vers [!DNL Experience Platform]. Cette erreur peut concerner l’analyse, la validation ou la transformation. |
+

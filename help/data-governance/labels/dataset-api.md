@@ -14,7 +14,7 @@ role_v2:
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 1280
 ht-degree: 81%
@@ -278,3 +278,4 @@ Une réponse réussie renvoie le jeu de libellés mis à jour pour le jeu de don
 En lisant ce document, vous avez appris la gestion des libellés dʼutilisation des données pour les jeux de données et les champs à lʼaide de lʼAPI [!DNL Dataset Service]. Vous pouvez maintenant définir les [politiques d’utilisation des données](../policies/overview.md) et les [politiques de contrôle d’accès](../../access-control/abac/ui/policies.md) selon les libellés que vous avez appliqués.
 
 Pour plus dʼinformations sur la gestion des jeux de données dans [!DNL Experience Platform], consultez la [présentation des jeux de données](../../catalog/datasets/overview.md).
+

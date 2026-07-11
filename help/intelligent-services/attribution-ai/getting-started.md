@@ -17,7 +17,7 @@ topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 633
 ht-degree: 58%
@@ -73,3 +73,4 @@ Consultez la documentation pour apprendre à [attribuer des autorisations pour l
 ## Étapes suivantes {#next-steps}
 
 Lorsque vous êtes prêt et que l’ensemble de vos informations d’identification et schémas sont en place, commencez par suivre le [guide de l’interface utilisateur d’Attribution AI](./user-guide.md). Ce guide vous accompagne dans la création d’une instance et son envoi pour formation et notation.
+

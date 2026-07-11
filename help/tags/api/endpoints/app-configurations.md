@@ -2,7 +2,7 @@
 title: Point d’entrée des configurations d’application
 description: Découvrez comment effectuer des appels vers le point d’entrée /app_configurations dans l’API Reactor.
 exl-id: 88a1ec36-b4d2-4fb6-92cb-1da04268492a
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: '569'
 ht-degree: 95%
@@ -371,3 +371,4 @@ curl -X DELETE \
 **Réponse**
 
 Une réponse réussie renvoie un statut HTTP 204 (No Content) sans corps de réponse, indiquant que la configuration d’application a été supprimée.
+

@@ -2,7 +2,7 @@
 title: Point D’Entrée Des Autorisations D’Utilisation Du Package D’Extension
 description: Découvrez comment effectuer des appels au point d’entrée d’autorisations /extension_package_usage dans l’API Reactor.
 exl-id: ad3fb704-7d2f-45ec-b80b-ea4d327f2205
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: '659'
 ht-degree: 16%
@@ -472,3 +472,4 @@ Une réponse réussie renvoie des données pour le package d’extension pour un
   }
 }
 ```
+

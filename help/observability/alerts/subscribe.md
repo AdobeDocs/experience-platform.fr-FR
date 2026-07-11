@@ -12,7 +12,7 @@ role_v2:
 topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 805
 ht-degree: 66%
@@ -113,3 +113,4 @@ En suivant ce tutoriel, vous avez enregistré un webhook pour recevoir des notif
 * [Notifications [!DNL Flow Service] (sources)](../../sources/notifications.md)
 
 Pour plus d’informations sur la façon de surveiller vos activités sur [!DNL Experience Platform] et [!DNL Privacy Service], consultez la [[!DNL Observability Insights] présentation](../home.md).
+

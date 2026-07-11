@@ -13,7 +13,7 @@ role_v2:
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 643
 ht-degree: 79%
@@ -261,3 +261,4 @@ Cette erreur s’affiche si aucune `xdmEntity` n’est renseignée.
     ]
 }
 ```
+

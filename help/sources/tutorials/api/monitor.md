@@ -12,7 +12,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 418
 ht-degree: 88%
@@ -243,3 +243,4 @@ Une réponse réussie renvoie des informations concernant votre exécution de fl
 ## Étapes suivantes
 
 En suivant ce tutoriel, vous avez récupéré des mesures et des informations relatives aux erreurs sur votre flux de données à l’aide de l’API [!DNL Flow Service]. Vous pouvez maintenant continuer à surveiller votre flux de données, en fonction de votre planning d’ingestion, pour suivre son statut et ses taux d’ingestion. Pour plus d’informations sur l’exécution des mêmes tâches à l’aide de l’interface utilisateur, consultez le tutoriel sur la [surveillance des flux de données à l’aide de l’interface utilisateur](../ui/monitor.md).
+

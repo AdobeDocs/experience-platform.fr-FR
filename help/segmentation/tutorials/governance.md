@@ -18,7 +18,7 @@ role_v2:
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 1365
 ht-degree: 42%
@@ -396,3 +396,4 @@ Pour plus d’informations, reportez-vous à la section [exportation d’une dé
 ## Étapes suivantes
 
 En suivant ce tutoriel, vous avez recherché les libellés d’utilisation des données associés à une définition de segment et les avez testés pour les violations de politique par rapport à des actions marketing spécifiques. Pour plus d’informations sur la gouvernance des données dans [!DNL Experience Platform], consultez la présentation de la [gouvernance des données](../../data-governance/home.md).
+

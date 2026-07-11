@@ -9,7 +9,7 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 621
 ht-degree: 7%
@@ -65,3 +65,4 @@ Le processus détaillé de configuration de votre source dans Experience Platfor
    * Vous pouvez utiliser ce [modèle de documentation de l’interface utilisateur des sources](./documentation/ui-template.md) pour structurer votre documentation de l’interface utilisateur.
    * Consultez le guide sur [à l’aide de l’interface web GitHub](./documentation/github.md) pour savoir comment créer de la documentation à l’aide de GitHub.
    * Pour savoir comment créer de la documentation à l’aide de votre ordinateur local[&#128279;](./documentation/text-editor.md) consultez le guide sur à l’aide d’un éditeur de texte.
+

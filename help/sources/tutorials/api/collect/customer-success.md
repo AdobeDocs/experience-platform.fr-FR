@@ -14,7 +14,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 1302
 ht-degree: 75%
@@ -647,3 +647,4 @@ La section suivante répertorie les différents connecteurs de source de stockag
 | -------------- | --------------- |
 | [!DNL Salesforce Service Cloud] | `cb66ab34-8619-49cb-96d1-39b37ede86ea` |
 | [!DNL ServiceNow] | `eb13cb25-47ab-407f-ba89-c0125281c563` |
+

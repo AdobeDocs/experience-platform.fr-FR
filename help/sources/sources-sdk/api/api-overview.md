@@ -8,7 +8,7 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 496
 ht-degree: 7%
@@ -50,3 +50,4 @@ Pour envoyer votre source en vue de son intégration à Experience Platform, vou
 ## Étapes suivantes
 
 Pour commencer à utiliser l’API [!DNL Flow Service] et créer une source par le biais de sources en libre-service (SDK par lots), lisez le guide [prise en main](./getting-started.md) puis sélectionnez l’un des guides des points d’entrée pour savoir comment utiliser des points d’entrée spécifiques.
+

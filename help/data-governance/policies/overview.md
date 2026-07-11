@@ -20,7 +20,7 @@ topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 1236
 ht-degree: 91%
@@ -118,3 +118,4 @@ Le tableau ci-dessous décrit les principales actions marketing prêtes à l’e
 | Personnalisation sur site | Action qui utilise des données pour la personnalisation du contenu sur site. La personnalisation sur site correspond à toutes les données utilisées pour faire des inférences sur les intérêts des utilisateurs et qui servent à sélectionner le contenu ou les publicités diffusés en fonction de ces inférences. |
 | Correspondance de segments | Une action qui utilise des données pour la correspondance de segments Adobe Experience Platform, qui permet à deux utilisateurs Experience Platform ou plus d’échanger des données d’audience. En activant les politiques qui font référence à cette action, vous pouvez limiter les données utilisées pour la Correspondance de segments. Par exemple, si la politique de base « Limiter le partage des données » est activée, les données avec un [libellé C11](../labels/reference.md#c11) ne peuvent pas être utilisées pour la correspondance de segments. |
 | Personnalisation d’identité unique | Action qui nécessite l’utilisation d’une identité unique à des fins de personnalisation au lieu de regrouper des identités provenant de plusieurs sources. |
+

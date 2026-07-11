@@ -2,7 +2,7 @@
 title: Point d’entrée des composants de règle
 description: Découvrez comment effectuer des appels au point d’entrée /rule_components dans l’API Reactor.
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 85%
@@ -1001,3 +1001,4 @@ Une réponse réussie renvoie les détails de l’origine du composant de règle
   }
 }
 ```
+

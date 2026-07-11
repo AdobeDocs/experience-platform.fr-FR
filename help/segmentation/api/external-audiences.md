@@ -15,7 +15,7 @@ role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
 topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 2877
 ht-degree: 8%
@@ -775,4 +775,5 @@ Une fois que vous avez ajouté l’audience à une destination, vous pouvez déc
 >[!IMPORTANT]
 >
 >Actuellement, les données sont activées deux fois : la première fois en raison du traitement d’activation express, qui se produit peu de temps après l’ingestion par lots et la seconde fois après le traitement d’évaluation de l’audience.
+
 

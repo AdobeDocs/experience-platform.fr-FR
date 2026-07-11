@@ -20,7 +20,7 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 2465
 ht-degree: 27%
@@ -893,3 +893,4 @@ Les points d’entrée d’API de ce tutoriel suivent les principes généraux d
 ## Étapes suivantes {#next-steps}
 
 Vous avez appris à mettre à jour divers composants d’un flux de données de destination, comme ajouter ou supprimer des audiences ou des attributs de profil à l’aide de l’API [!DNL Flow Service]. Pour plus d’informations sur les destinations, consultez la [présentation des destinations](../home.md).
+

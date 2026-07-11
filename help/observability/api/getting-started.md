@@ -12,7 +12,7 @@ role_v2:
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 249
 ht-degree: 51%
@@ -42,3 +42,4 @@ Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sa
 ## Étapes suivantes
 
 Pour commencer à effectuer des appels à l’aide de l’API [!DNL Observability Insights], reportez-vous au guide [des points d’entrée des mesures](./metrics.md).
+

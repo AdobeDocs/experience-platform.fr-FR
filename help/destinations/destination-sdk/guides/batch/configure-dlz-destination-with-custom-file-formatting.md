@@ -11,7 +11,7 @@ feature_v2:
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 731
 ht-degree: 8%
@@ -460,3 +460,4 @@ Si vous êtes un fournisseur de logiciels indépendant (ISV) ou un intégrateur 
 ## Étapes suivantes {#next-steps}
 
 Vous savez désormais comment créer une destination [!DNL Data Landing Zone] personnalisée à l’aide de Destination SDK. Ensuite, votre équipe peut utiliser le [workflow d’activation pour les destinations basées sur des fichiers](../../../ui/activate-batch-profile-destinations.md) pour exporter des données vers la destination.
+

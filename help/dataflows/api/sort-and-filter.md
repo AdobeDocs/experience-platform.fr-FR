@@ -7,7 +7,7 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 889
 ht-degree: 2%
@@ -255,3 +255,4 @@ GET /runs?property=flowId==<flow-id>&property=metrics.statusSummary.status==Fail
 ## Étapes suivantes
 
 Ce guide explique comment utiliser les paramètres de requête `orderby` et `property` pour trier et filtrer les réponses dans l’API Flow Service. Pour obtenir des guides détaillés sur l’utilisation de l’API pour les workflows courants dans Experience Platform, consultez les tutoriels sur l’API contenus dans les documents [sources](../../sources/home.md) et [destinations](../../destinations/home.md).
+

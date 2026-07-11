@@ -14,7 +14,7 @@ topic_v2:
   - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 282
 ht-degree: 42%
@@ -62,3 +62,4 @@ Une fois que vous disposez des informations d’authentification requises, vous 
 * [MLServices](./mlservices.md)
 * [Modèles](./models.md)
 * [Annexe](./appendix.md)
+

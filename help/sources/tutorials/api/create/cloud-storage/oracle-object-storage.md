@@ -10,7 +10,7 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 565
 ht-degree: 30%
@@ -118,3 +118,4 @@ Une réponse réussie renvoie l’identifiant de connexion de la connexion nouve
 ## Étapes suivantes
 
 Ce tutoriel vous a permis de créer une connexion [!DNL Oracle Object Storage] à l’aide de l’API [!DNL Flow Service] et d’obtenir son identifiant de connexion unique. Vous pouvez utiliser cet identifiant de connexion pour [explorer les espaces de stockage dans le cloud à l’aide de l’API Flow Service](../../explore/cloud-storage.md).
+

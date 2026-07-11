@@ -13,7 +13,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 334
 ht-degree: 61%
@@ -52,3 +52,4 @@ Consultez les tutoriels d’API suivants pour commencer à lancer des appels à 
 
 * [Point d’entrée des rôles](./roles.md)
 * [Point d’entrée de produits](./products.md)
+

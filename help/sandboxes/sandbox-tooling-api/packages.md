@@ -15,7 +15,7 @@ role_v2:
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: c3f74850f39b67f68851f20197507c13b7583543
 workflow-type: tm+mt
 source-wordcount: 2944
 ht-degree: 11%
@@ -2002,7 +2002,7 @@ Comparez une version spécifiée ou la dernière version d’un instantané de p
 ***Format d’API***
 
 ```http
-PATCH /packages/{packageId}/version/compare
+POST /packages/{packageId}/version/compare
 ```
 
 | Propriété | Description | Type | Obligatoire |
@@ -2212,7 +2212,7 @@ Mettez à niveau le package vers une nouvelle version à l’aide du dernier ins
 ***Format d’API***
 
 ```http
-PATCH /packages/{packageId}/version/save
+GET /packages/{packageId}/version/save
 ```
 
 | Propriété | Description | Type | Obligatoire |
@@ -2222,7 +2222,7 @@ PATCH /packages/{packageId}/version/save
 **Requête**
 
 ```shell
-curl -X POST \
+curl -X GET \
   https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/version/save/ \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -2274,7 +2274,7 @@ Récupérez l’historique du contrôle de version du package, y compris l’hor
 ***Format d’API***
 
 ```http
-PATCH /packages/{packageId}/history
+GET /packages/{packageId}/history
 ```
 
 | Propriété | Description | Type | Obligatoire |
@@ -2284,7 +2284,7 @@ PATCH /packages/{packageId}/history
 **Requête**
 
 ```shell
-curl -X POST \
+curl -X GET \
   https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/history/ \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -2350,7 +2350,7 @@ PATCH /packages/{packageId}/import
 **Requête**
 
 ```shell
-curl -X POST \
+curl -X PATCH \
   https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import/ \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -2416,7 +2416,7 @@ Désactivez la mise à jour et le remplacement des packages qui ne les prennent 
 ***Format d’API***
 
 ```http
-PATCH /packages/{packageId}?{QUERY_PARAMS}
+GET /packages/{packageId}?{QUERY_PARAMS}
 ```
 
 | Propriété | Description | Type | Obligatoire |
@@ -2427,7 +2427,7 @@ PATCH /packages/{packageId}?{QUERY_PARAMS}
 **Requête**
 
 ```shell
-curl -X POST \
+curl -X GET \
   https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}?getCapabilities=true'/ \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \

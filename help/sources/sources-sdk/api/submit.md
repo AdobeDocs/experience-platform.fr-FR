@@ -8,7 +8,7 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 841
 ht-degree: 10%
@@ -94,3 +94,4 @@ L’interface [!DNL Runner] s’affiche, vous permettant de configurer l’ordre
 ## Envoyer votre source
 
 Une fois que votre source est en mesure de terminer l’ensemble du workflow, vous pouvez contacter votre représentant Adobe et envoyer votre source pour intégration.
+

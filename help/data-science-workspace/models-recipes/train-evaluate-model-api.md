@@ -15,7 +15,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 1247
 ht-degree: 79%
@@ -537,3 +537,4 @@ Voici la réponse qui indique que l’expérience a bien été supprimée.
 ## Étapes suivantes
 
 Ce tutoriel explique comment utiliser les API pour créer un moteur, une expérience, des exécutions d’expériences planifiées et des modèles formés. Au cours de l’[exercice suivant](./score-model-api.md), vous allez faire des prédictions en évaluant un nouveau jeu de données à l’aide du modèle formé le plus performant.
+

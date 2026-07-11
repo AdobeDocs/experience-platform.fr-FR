@@ -19,7 +19,7 @@ role_v2:
 topic_v2:
   - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
 workflow-type: tm+mt
 source-wordcount: 1622
 ht-degree: 47%
@@ -246,3 +246,4 @@ Pour obtenir des instructions détaillées sur l’utilisation de l’API [!DNL 
 Vous pouvez également accéder aux données de définition de segment correctement exportées à l’aide de [!DNL Adobe Experience Platform Query Service]. À l’aide de l’interface utilisateur ou de l’API RESTful, [!DNL Query Service] vous permet d’écrire, de valider et d’exécuter des requêtes sur les données de l’[!DNL Data Lake].
 
 Pour plus d’informations sur la manière d’interroger les données d’audience, consultez la documentation sur [[!DNL Query Service]](../../query-service/home.md).
+
