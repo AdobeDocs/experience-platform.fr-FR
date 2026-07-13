@@ -3,11 +3,9 @@ title: Tri et filtrage des réponses dans l’API Flow Service
 description: Ce tutoriel décrit la syntaxe pour le tri et le filtrage à l’aide de paramètres de requête dans l’API Flow Service, y compris certains cas d’utilisation avancés.
 exl-id: 029c3199-946e-4f89-ba7a-dac50cc40c09
 TQID: https://experienceleague.adobe.com/f5WCgSH7n95jQGrAMPA5OvvtayXlTaFGB2EtM7TggXc
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 889
 ht-degree: 2%
@@ -255,4 +253,5 @@ GET /runs?property=flowId==<flow-id>&property=metrics.statusSummary.status==Fail
 ## Étapes suivantes
 
 Ce guide explique comment utiliser les paramètres de requête `orderby` et `property` pour trier et filtrer les réponses dans l’API Flow Service. Pour obtenir des guides détaillés sur l’utilisation de l’API pour les workflows courants dans Experience Platform, consultez les tutoriels sur l’API contenus dans les documents [sources](../../sources/home.md) et [destinations](../../destinations/home.md).
+
 

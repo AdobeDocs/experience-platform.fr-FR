@@ -6,20 +6,12 @@ description: L’API Sandbox permet aux développeurs de gérer les sandbox par 
 role: Developer
 exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
 TQID: https://experienceleague.adobe.com/DZk-wbm6bJeiqFbZhxaXQNvhXFwxrIAHqVJGlybbj-E
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
-subfeature_v2:
-  - id: a16ec9c0-4484-4842-b9a0-5504cde38e6a
-  - id: a9eb38d5-9d89-492f-af4e-b968a07f2d91
-  - id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: adf04a6a-050f-44bc-a52c-db79ccb22ebf
+subfeature_v2: id: a16ec9c0-4484-4842-b9a0-5504cde38e6aid: a9eb38d5-9d89-492f-af4e-b968a07f2d91id: d21bd11d-08df-4cd6-ad8f-cb59a09de5c0
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 381
 ht-degree: 80%
@@ -59,4 +51,5 @@ Toutes les requêtes contenant un payload (POST, PUT et PATCH) requièrent un en
 ## Étapes suivantes
 
 Maintenant que vous avez collecté les informations d’identification requises, vous pouvez passer au reste du guide de développement. Chaque section fournit des informations importantes sur les points d’entrée et inclut des exemples d’appels API pour effectuer des opérations CRUD. Chaque appel comprend le format général de l’API, un exemple de requête montrant les en-têtes requis et les payloads correctement formatés, ainsi qu’un exemple de réponse pour un appel réussi.
+
 

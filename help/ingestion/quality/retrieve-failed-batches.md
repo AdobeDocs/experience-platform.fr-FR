@@ -6,14 +6,10 @@ type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des informations sur un lot en échec à l’aide des API Data Ingestion.
 exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
 TQID: https://experienceleague.adobe.com/-jWUju-qJllVfDmdFAE8KUXDQhPe6CkLVeA798417hw
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 643
 ht-degree: 79%
@@ -261,4 +257,5 @@ Cette erreur s’affiche si aucune `xdmEntity` n’est renseignée.
     ]
 }
 ```
+
 

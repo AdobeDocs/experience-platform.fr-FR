@@ -5,14 +5,10 @@ description: La documentation suivante fournit des informations supplémentaires
 role: Developer
 exl-id: 8f33707f-b46d-4054-802c-9e42ecabd9ba
 TQID: https://experienceleague.adobe.com/NqOjMm0CoMKRcl5C2iHvvj0Lbl--Q6KSMyBNoEF7yRE
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 269
 ht-degree: 38%
@@ -48,4 +44,5 @@ Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sa
 ## Étapes suivantes
 
 Pour lancer des appels à l’aide de l’API Balises unifiées, sélectionnez l’un des guides de point d’entrée disponibles à l’aide du volet de navigation de gauche ou dans la [présentation du guide de développement](./overview.md)
+
 

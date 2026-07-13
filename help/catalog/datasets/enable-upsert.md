@@ -5,17 +5,11 @@ type: Tutorial
 description: Ce tutoriel vous explique comment utiliser les API Adobe Experience Platform pour activer un jeu de données avec des fonctionnalités « d’upsert » afin d’effectuer des mises à jour sur les données du profil client en temps réel.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
 TQID: https://experienceleague.adobe.com/p5jj3hqMYlEi9cSWvZnWF7grBtIrY0L-lUtZQ6R1wH8
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 1088
 ht-degree: 86%
@@ -302,4 +296,5 @@ Une requête PATCH réussie renvoie un statut HTTP 200 (OK) et un tableau conte
 ## Étapes suivantes
 
 Votre jeu de données activé pour Profil et upsert peut désormais être utilisé par les workflows d’ingestion par lots pour mettre à jour les données de profil. Pour en savoir plus sur l’ingestion de données dans Adobe Experience Platform, commencez par lire la [présentation de l’ingestion des données](../../ingestion/home.md).
+
 
