@@ -4,8 +4,10 @@ description: Découvrez comment connecter Adobe Experience Platform à Chatlio �
 badge: Beta
 exl-id: 867b8096-0841-4462-9888-e60c97c2115e
 TQID: https://experienceleague.adobe.com/ug--2AEOnj-o2yX1GZaKufNLtJJBFmOe3gskaVogTCs
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 18c3bd1c361dc9e284ede73aa84d188b76ef45c0
 workflow-type: tm+mt
 source-wordcount: 1485
@@ -19,7 +21,7 @@ ht-degree: 47%
 >
 >La source [!DNL Chatlio] est en version Beta. Veuillez lire la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
-Le tutoriel suivant vous guide tout au long des étapes de création d’une connexion source et d’un flux de données pour importer des données d’événement [[!DNL Chatlio]](https://chatlio.com/) dans Adobe Experience Platform à l’aide de l’API [[!DNL Flow Service] ](https://developer.adobe.com/experience-platform-apis/references/flow-service).
+Le tutoriel suivant vous guide tout au long des étapes de création d’une connexion source et d’un flux de données pour importer des données d’événement [[!DNL Chatlio]](https://chatlio.com/) dans Adobe Experience Platform à l’aide de l’API [[!DNL Flow Service] &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service).
 
 ## Prise en main {#getting-started}
 

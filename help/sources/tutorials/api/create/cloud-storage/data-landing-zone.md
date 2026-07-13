@@ -3,8 +3,10 @@ title: Connecter Data Landing Zone à Adobe Experience Platform à l’aide de l
 description: Découvrez comment connecter Adobe Experience Platform à Data Landing Zone à l’aide de l’API Flow Service.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
 TQID: https://experienceleague.adobe.com/X0dgc1KobP6xMAWX7CEWjWDTOpXpsKn64U4mL3HoLUY
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 18c3bd1c361dc9e284ede73aa84d188b76ef45c0
 workflow-type: tm+mt
 source-wordcount: 1428
@@ -676,6 +678,6 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle conne
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez récupéré vos informations d’identification [!DNL Data Landing Zone], exploré sa structure de fichiers pour trouver le fichier que vous souhaitez importer dans Experience Platform et créé une connexion source pour commencer à importer vos données dans Experience Platform. Vous pouvez maintenant passer au tutoriel suivant, où vous apprendrez à [créer un flux de données pour importer des données d’espace de stockage dans Experience Platform à l’aide de l’API [!DNL Flow Service] ](../../collect/cloud-storage.md).
+En suivant ce tutoriel, vous avez récupéré vos informations d’identification [!DNL Data Landing Zone], exploré sa structure de fichiers pour trouver le fichier que vous souhaitez importer dans Experience Platform et créé une connexion source pour commencer à importer vos données dans Experience Platform. Vous pouvez maintenant passer au tutoriel suivant, où vous apprendrez à [créer un flux de données pour importer des données d’espace de stockage dans Experience Platform à l’aide de l’API [!DNL Flow Service] &#x200B;](../../collect/cloud-storage.md).
 
 

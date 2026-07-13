@@ -19,7 +19,7 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 
 >[!TIP]
 >
->Avant de commencer ce tutoriel, consultez la [[!DNL LAVA]  présentation du connecteur source ](../../../../connectors/loyalty/lava.md) pour vous assurer que vous remplissez toutes les conditions préalables.
+>Avant de commencer ce tutoriel, consultez la [[!DNL LAVA]  présentation du connecteur source &#x200B;](../../../../connectors/loyalty/lava.md) pour vous assurer que vous remplissez toutes les conditions préalables.
 
 ## Charger le package [!DNL LAVA]
 

@@ -6,8 +6,10 @@ type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à Azure Data Lake Storage Gen2 à l’aide de l’API Flow Service.
 exl-id: cad5e2a0-e27c-4130-9ad8-888352c92f04
 TQID: https://experienceleague.adobe.com/wbYohKTMJzPJdAJ7g9Q5F3xcLF97WCwdtBR9wYZ-9oQ
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 18c3bd1c361dc9e284ede73aa84d188b76ef45c0
 workflow-type: tm+mt
 source-wordcount: 525
