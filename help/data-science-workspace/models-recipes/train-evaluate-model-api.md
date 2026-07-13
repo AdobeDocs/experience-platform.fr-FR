@@ -6,10 +6,15 @@ type: Tutorial
 description: Ce tutoriel vous explique comment créer, entraîner et évaluer un modèle à l’aide d’appels API de machine learning Sensei.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
 TQID: https://experienceleague.adobe.com/wRFVt9xogecMJh5GYNjZhreBN07-cr7pqClWwkjohFU
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 1247
@@ -31,7 +36,7 @@ Ce tutoriel vous explique comment créer, former et évaluer un modèle à l’a
 
 Suivez la procédure [Importer une recette empaquetée à l’aide de l’API](./import-packaged-recipe-api.md) pour créer un moteur, ce qui est nécessaire pour former et évaluer un modèle à l’aide de l’API.
 
-Suivez le tutoriel [Authentification de l’API ](/help/landing/api-authentication.md) pour commencer à effectuer des appels API.
+Suivez le tutoriel [Authentification de l’API &#x200B;](/help/landing/api-authentication.md) pour commencer à effectuer des appels API.
 
 Grâce au tutoriel, vous devez maintenant disposer des valeurs suivantes :
 

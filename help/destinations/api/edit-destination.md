@@ -5,10 +5,16 @@ type: Tutorial
 description: Découvrez comment modifier divers composants d’une connexion de destination à l’aide de l’API Flow Service.
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
 TQID: https://experienceleague.adobe.com/te1OT80nWznZAkM5m7bnOpPcnAgS0my4GdjE3rs99oc
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 1615
@@ -18,7 +24,7 @@ ht-degree: 24%
 
 # Modifier des connexions de destination à l’aide de l’API Flow Service
 
-Ce tutoriel décrit les étapes à suivre pour modifier divers composants d’une connexion à la destination. Découvrez comment mettre à jour les informations d’authentification, l’emplacement d’exportation, etc. à l’aide de l’API ](https://developer.adobe.com/experience-platform-apis/references/flow-service).[[!DNL Flow Service] 
+Ce tutoriel décrit les étapes à suivre pour modifier divers composants d’une connexion à la destination. Découvrez comment mettre à jour les informations d’authentification, l’emplacement d’exportation, etc. à l’aide de l’API [&#128279;](https://developer.adobe.com/experience-platform-apis/references/flow-service).[!DNL Flow Service] 
 
 >[!NOTE]
 >
@@ -295,11 +301,11 @@ Une réponse réussie renvoie votre identifiant de connexion cible et une etag m
 }
 ```
 
->[!TAB ]
+>[!TAB Tab]
 
 **Requête**
 
-La requête suivante met à jour le paramètre `advertiserId` d’une [[!DNL Pinterest]  connexion de destination ](/help/destinations/catalog/advertising/pinterest.md#parameters).
+La requête suivante met à jour le paramètre `advertiserId` d’une [[!DNL Pinterest]  connexion de destination &#x200B;](/help/destinations/catalog/advertising/pinterest.md#parameters).
 
 ```shell
 curl -X PATCH \

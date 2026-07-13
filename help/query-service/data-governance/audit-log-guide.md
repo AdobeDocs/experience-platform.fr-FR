@@ -3,9 +3,16 @@ title: Intégration du journal d’audit de Query Service
 description: Les journaux d’audit de Query Service conservent des enregistrements pour diverses actions des utilisateurs afin de former un journal d’audit pour résoudre les problèmes ou respecter les politiques de gestion des données d’entreprise et les exigences réglementaires. Ce tutoriel présente une vue d’ensemble des fonctionnalités du journal d’audit spécifiques à Query Service.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
 TQID: https://experienceleague.adobe.com/vXV3gcTNSwMY-jOb9O5dKtXS7DanR4VJWBqun5qME4Q
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 958
@@ -34,7 +41,7 @@ Les catégories de journaux d’audit fournies par [!DNL Query Service] sont les
 | Catégorie | Description |
 |---|---|
 | [!UICONTROL Requête] | Cette catégorie vous permet d’auditer les exécutions de requêtes. |
-| [!UICONTROL Modèle de requête ] | Cette catégorie vous permet d’auditer les différentes actions (création, mise à jour et suppression) effectuées sur un modèle de requête. |
+| [!UICONTROL Modèle de requête &#x200B;] | Cette catégorie vous permet d’auditer les différentes actions (création, mise à jour et suppression) effectuées sur un modèle de requête. |
 | [!UICONTROL Requête planifiée] | Cette catégorie vous permet de contrôler les plannings qui ont été créés, mis à jour ou supprimés dans [!DNL Query Service]. |
 
 ## Exécution d’un journal d’audit [!DNL Query Service] {#perform-an-audit-log}
@@ -50,7 +57,7 @@ Les données du journal d’audit renvoyées contiennent les informations suivan
 | Nom de la colonne | Description |
 |---|---|
 | [!UICONTROL Horodatage] | Date et heure exactes de l’action effectuée au format `month/day/year hour:minute AM/PM`. |
-| [!UICONTROL Nom de la ressource] | La valeur du champ [!UICONTROL  Nom de ressource ] dépend de la catégorie choisie comme filtre. Lors de l’utilisation de la catégorie [!UICONTROL Requête planifiée] il s’agit du **nom du planning**. Lors de l’utilisation de la catégorie [!UICONTROL Modèle de requête], il s’agit du **nom du modèle**. Lors de l’utilisation de la catégorie [!UICONTROL Requête], il s’agit de l’**ID de session** |
+| [!UICONTROL Nom de la ressource] | La valeur du champ [!UICONTROL &#x200B; Nom de ressource &#x200B;] dépend de la catégorie choisie comme filtre. Lors de l’utilisation de la catégorie [!UICONTROL Requête planifiée] il s’agit du **nom du planning**. Lors de l’utilisation de la catégorie [!UICONTROL Modèle de requête], il s’agit du **nom du modèle**. Lors de l’utilisation de la catégorie [!UICONTROL Requête], il s’agit de l’**ID de session** |
 | [!UICONTROL Catégorie] | Ce champ correspond à la catégorie sélectionnée par vous dans la liste déroulante de filtre. |
 | [!UICONTROL Action] | Il peut s’agir de créer, supprimer, mettre à jour ou exécuter. Les actions disponibles dépendent de la catégorie choisie comme filtre. |
 | [!UICONTROL Utilisateur] | Ce champ fournit l’identifiant utilisateur qui a exécuté la requête. |
@@ -75,7 +82,7 @@ La valeur de l’[!UICONTROL ID de ressource] change en fonction de la catégori
 * Lors de l’utilisation de la catégorie [!UICONTROL Modèle de requête], l’[!UICONTROL ID de ressource] est l’**ID de modèle** et comporte le préfixe `[!UICONTROL templateID:]`.
 * Lors de l’utilisation de la catégorie [!UICONTROL Requête planifiée], l’[!UICONTROL ID de ressource] est l’**ID de planification** et comporte le préfixe `[!UICONTROL scheduleID:]`.
 
-La valeur du [!UICONTROL  Statut de l’événement ] change en fonction de la catégorie utilisée dans l’audit.
+La valeur du [!UICONTROL &#x200B; Statut de l’événement &#x200B;] change en fonction de la catégorie utilisée dans l’audit.
 
 * Lors de l’utilisation de la catégorie [!UICONTROL Requête], le champ [!UICONTROL Statut de l’événement] fournit une liste de tous les **ID de requête** exécutés par l’utilisateur au cours de cette session.
 * Lors de l’utilisation de la catégorie [!UICONTROL Modèle de requête], le champ [!UICONTROL Statut de l’événement] fournit le **nom du modèle** comme préfixe du statut de l’événement.
@@ -97,6 +104,6 @@ Les filtres disponibles varient en fonction de la catégorie sélectionnée dans
 
 Grâce à la lecture de ce document, vous comprenez mieux la fonctionnalité de journal d’audit [!DNL Query Service] et comment elle peut être utilisée pour filtrer vos actions utilisateur [!DNL Query Service].
 
-Si vous utilisez la fonctionnalité de journal d’audit [!DNL Query Service] à des fins de dépannage, nous vous recommandons de lire le guide de dépannage [](../troubleshooting-guide.md).
+Si vous utilisez la fonctionnalité de journal d’audit [!DNL Query Service] à des fins de dépannage, nous vous recommandons de lire le guide de dépannage [&#128279;](../troubleshooting-guide.md).
 
 

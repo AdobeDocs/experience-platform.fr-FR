@@ -5,9 +5,13 @@ title: Prise en main du balisage de contenu
 description: Le balisage de contenu utilise les API Adobe I/O. Pour lancer des appels aux API Adobe I/O et à l’intégration de la console I/O, vous devez d’abord suivre le tutoriel sur l’authentification.
 exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
 TQID: https://experienceleague.adobe.com/HOT682PuFoU2fyxdRtKHScIOQSxRSVthbsyd9Yxz8os
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 570
@@ -37,7 +41,7 @@ Une fois que vous avez configuré votre projet et votre API dans Adobe Developer
 
 Une fois le fichier téléchargé, ouvrez Postman et sélectionnez l’icône **engrenage** en haut à droite pour ouvrir la boîte de dialogue **gérer les environnements**.
 
-![ icône d’engrenage ](./images/select-gear-icon.png)
+![&#x200B; icône d’engrenage &#x200B;](./images/select-gear-icon.png)
 
 Sélectionnez ensuite **Importer** dans la boîte de dialogue **Gérer les environnements**.
 
