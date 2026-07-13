@@ -5,31 +5,15 @@ title: Présentation de la correspondance des segments
 description: La correspondance des segments est un service de partage de segments dans Adobe Experience Platform qui permet à deux utilisateurs d’Experience Platform ou plus d’échanger des données de segment de manière sécurisée, régulée et respectueuse de la confidentialité.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
 TQID: https://experienceleague.adobe.com/0n9tt7qxseG0C6JTdiHzjHCRA0WaRO4UKrChcacKDys
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: e08599ea-8888-4294-ba74-3ba0a7762a46
-subfeature_v2:
-  - id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6
-  - id: aff8c1fa-1be7-48bd-92b8-4b12a668ca13
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-  - id: f0c9f224-75f2-4864-8de6-859ae7856690
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: e08599ea-8888-4294-ba74-3ba0a7762a46
+subfeature_v2: id: acc16deb-1d7f-4ec9-9ce3-6cdf355afde6id: aff8c1fa-1be7-48bd-92b8-4b12a668ca13id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773id: f0c9f224-75f2-4864-8de6-859ae7856690
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: b70b96248f4884160c6d41730b64ea7fdcc09af3
 workflow-type: tm+mt
-source-wordcount: 2203
-ht-degree: 60%
+source-wordcount: 2147
+ht-degree: 62%
 
 ---
 
@@ -37,10 +21,7 @@ ht-degree: 60%
 
 >[!IMPORTANT]
 >
->Adobe a introduit [!DNL Segment Match] en 2021 pour permettre aux clients de collaborer et d’échanger des audiences. Début 2025, Adobe a introduit [Real-Time CDP Collaboration](https://experienceleague.adobe.com/fr/docs/real-time-cdp-collaboration/using/home), qui est l’approche à plus long terme permettant de répondre à ce cas d’utilisation.
->
->* Pour les clients situés aux États-Unis, au Canada, en Australie, en Nouvelle-Zélande et dans la région EMEA : Adobe recommande aux clients Real-Time CDP Prime et Ultimate de faire passer les cas d’utilisation de collaboration en matière de données de [!DNL Segment Match] à Real-Time CDP Collaboration. Consultez la [documentation](https://experienceleague.adobe.com/fr/docs/real-time-cdp-collaboration/using/home) et le [guide de démarrage rapide](https://experienceleague.adobe.com/fr/docs/real-time-cdp-collaboration/using/quick-start-guide) pour Real-Time CDP Collaboration et contactez l’équipe de votre compte Adobe pour en savoir plus.
->* Pour les clients de toutes les autres zones géographiques : [!DNL Segment Match] est l’option recommandée jusqu’à la sortie de Real-Time CDP Collaboration dans ces zones géographiques en 2026.
+>La correspondance de segments Adobe Experience Platform sera arrêtée et ne sera plus disponible après le 27 novembre 2026. Adobe recommande aux clients Real-Time CDP Prime et Ultimate de passer des cas d’utilisation de collaboration de données de [!DNL Segment Match] à Real-Time CDP Collaboration. Consultez la [documentation](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home) et le [guide de démarrage rapide](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/quick-start-guide) pour Real-Time CDP Collaboration et contactez l’équipe de votre compte Adobe pour en savoir plus.
 
 La correspondance de segments Adobe Experience Platform est un service de partage de segments qui permet à deux utilisateurs d’Experience Platform ou plus d’échanger des données de segment de manière sécurisée, régulée et respectueuse de la confidentialité. [!DNL Segment Match] utilise les normes de confidentialité et les identifiants personnels Experience Platform tels que les e-mails hachés, les numéros de téléphone hachés et les identifiants d’appareils comme les IDFA et les GAID.
 
@@ -73,7 +54,7 @@ La liste des espaces de noms pris en charge est la suivante :
 
 | Espace de noms | Description |
 | --------- | ----------- |
-| E-mails (SHA256, en minuscules) | Un espace de noms pour adresse électronique préhachée. Les valeurs fournies dans cet espace de noms sont converties en minuscules avant le hachage en SHA-256. Les espaces de début et de fin doivent être supprimés avant qu’une adresse e-mail ne soit normalisée. Ce paramètre ne peut pas être modifié rétroactivement. Experience Platform propose deux méthodes de prise en charge du hachage lors de la collecte de données, par le biais de [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=fr#hashing-support) et par le biais de [préparation des données](../../../data-prep/functions.md#hashing). |
+| E-mails (SHA256, en minuscules) | Un espace de noms pour adresse électronique préhachée. Les valeurs fournies dans cet espace de noms sont converties en minuscules avant le hachage en SHA-256. Les espaces de début et de fin doivent être supprimés avant qu’une adresse e-mail ne soit normalisée. Ce paramètre ne peut pas être modifié rétroactivement. Experience Platform propose deux méthodes de prise en charge du hachage lors de la collecte de données, par le biais de [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) et par le biais de [préparation des données](../../../data-prep/functions.md#hashing). |
 | Téléphone (SHA256_E.164) | Un espace de noms représentant des numéros de téléphone bruts qui doivent être hachés au format SHA256 et E.164. |
 | ECID | Un espace de noms représentant une valeur d’ID Experience Cloud (ECID). Cet espace de noms peut également être référencé par les alias suivants : « ID Adobe Marketing Cloud », « ID Adobe Experience Cloud », « ID Adobe Experience Platform ». Pour plus d’informations, consultez la [présentation ECID](../../../identity-service/features/ecid.md). |
 | IDFA Apple (ID pour les annonceurs) | Un espace de noms représentant l’ID Apple pour les annonceurs. Pour plus d’informations, consultez le document sur les [annonces basées sur les intérêts](https://support.apple.com/fr-fr/HT202074). |
@@ -166,8 +147,8 @@ La configuration de base d’un flux comprend un nom, une description et des con
 * [!UICONTROL Exporter vers un tiers]
 * [!UICONTROL Publicité sur site]
 * [!UICONTROL La personnalisation sur site]
-* [!UICONTROL &#x200B; Correspondance de segments &#x200B;]
-* [!UICONTROL &#x200B; Personnalisation d’identité unique &#x200B;]
+* [!UICONTROL  Correspondance de segments ]
+* [!UICONTROL  Personnalisation d’identité unique ]
 
 Enfin, sélectionnez les espaces de noms d’identité appropriés pour votre flux. Pour plus d’informations sur les espaces de noms spécifiques pris en charge par [!DNL Segment Match], consultez le [tableau des données d’identité et des espaces de noms](#namespaces). Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
