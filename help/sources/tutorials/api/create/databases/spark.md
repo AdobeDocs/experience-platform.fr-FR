@@ -6,13 +6,10 @@ type: Tutorial
 description: Découvrez comment connecter Apache Spark on Azure HDInsights à Adobe Experience Platform à l’aide de l’API Flow Service.
 exl-id: 1f7ca86e-32f4-45f7-92c2-f87c5c0c4ea4
 TQID: https://experienceleague.adobe.com/5mbsWQ5284aMjw13rt9aXh4CSuGJqQme0KR5dzaZY1A
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 18c3bd1c361dc9e284ede73aa84d188b76ef45c0
 workflow-type: tm+mt
 source-wordcount: 510
 ht-degree: 47%
@@ -23,7 +20,7 @@ ht-degree: 47%
 
 >[!NOTE]
 >
->Le connecteur [!DNL Apache Spark] sur [!DNL Azure HDInsights] est en version bêta. Consultez la [&#x200B; Présentation des sources &#x200B;](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
+>Le connecteur [!DNL Apache Spark] sur [!DNL Azure HDInsights] est en version bêta. Consultez la [ Présentation des sources ](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
@@ -121,5 +118,6 @@ Une réponse réussie renvoie les détails de la connexion nouvellement créée,
 Ce tutoriel vous a permis de créer une connexion de base à [!DNL Spark] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants :
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer les données de la base de données dans Experience Platform à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/database-nosql.md)
+* [Créez un flux de données pour importer les données de la base de données dans Experience Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/database-nosql.md)
+
 

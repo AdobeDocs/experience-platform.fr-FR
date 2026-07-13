@@ -6,11 +6,9 @@ type: Tutorial
 description: Découvrez comment connecter l’API REST générique à Adobe Experience Platform à l’aide de l’API Flow Service.
 exl-id: 6b414868-503e-49d5-8f4a-5b2fc003dab0
 TQID: https://experienceleague.adobe.com/bXoERktzrBnptAmyVLl66qsaC--G0tsEDnQ5ydBAP-Y
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 18c3bd1c361dc9e284ede73aa84d188b76ef45c0
 workflow-type: tm+mt
 source-wordcount: 962
 ht-degree: 45%
@@ -21,7 +19,7 @@ ht-degree: 45%
 
 >[!NOTE]
 >
->La source [!DNL Generic REST API] est en version Beta. Consultez la [&#x200B; Présentation des sources &#x200B;](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
+>La source [!DNL Generic REST API] est en version Beta. Consultez la [ Présentation des sources ](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs étiquetés Beta.
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
@@ -195,5 +193,6 @@ Une réponse réussie renvoie la nouvelle connexion de base, y compris son ident
 Ce tutoriel vous a permis de créer une connexion de base à [!DNL Generic REST API] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants :
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer les données de protocoles dans Experience Platform à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/protocols.md)
+* [Créez un flux de données pour importer les données de protocoles dans Experience Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/protocols.md)
+
 

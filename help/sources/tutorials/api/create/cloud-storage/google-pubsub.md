@@ -4,11 +4,9 @@ description: Découvrez comment connecter Adobe Experience Platform à un compte
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
 TQID: https://experienceleague.adobe.com/oA7vCQNK7rXP-qMJboztPITnBnGBvr9ggIJhMB1G4Jo
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 18c3bd1c361dc9e284ede73aa84d188b76ef45c0
 workflow-type: tm+mt
 source-wordcount: 1211
 ht-degree: 44%
@@ -21,7 +19,7 @@ ht-degree: 44%
 >
 >La source [!DNL Google PubSub] est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-Time Customer Data Platform Ultimate.
 
-Ce tutoriel vous guide tout au long des étapes de connexion de [!DNL Google PubSub] (ci-après dénommé « [!DNL PubSub] ») à Experience Platform à l’aide de l’API [[!DNL Flow Service] &#x200B;](<https://developer.adobe.com/experience-platform-apis/references/flow-service>).
+Ce tutoriel vous guide tout au long des étapes de connexion de [!DNL Google PubSub] (ci-après dénommé « [!DNL PubSub] ») à Experience Platform à l’aide de l’API [[!DNL Flow Service] ](<https://developer.adobe.com/experience-platform-apis/references/flow-service>).
 
 ## Commencer
 
@@ -269,5 +267,6 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle conne
 
 ## Étapes suivantes
 
-Ce tutoriel vous a permis de créer une connexion source [!DNL PubSub] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet ID de connexion source dans le tutoriel suivant pour [créer un flux de données en continu à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/streaming.md).
+Ce tutoriel vous a permis de créer une connexion source [!DNL PubSub] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet ID de connexion source dans le tutoriel suivant pour [créer un flux de données en continu à l’aide de l’API  [!DNL Flow Service] ](../../collect/streaming.md).
+
 

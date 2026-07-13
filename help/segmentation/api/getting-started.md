@@ -6,21 +6,12 @@ description: La documentation suivante fournit des informations supplémentaires
 role: Developer
 exl-id: 41c0e50b-afed-45b8-85d7-a0c84ae090f5
 TQID: https://experienceleague.adobe.com/kGC36J1XMUpGXX20QtrYucHr8vE9um4ymq4-71L1T-Q
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2:
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12bid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 18c3bd1c361dc9e284ede73aa84d188b76ef45c0
 workflow-type: tm+mt
 source-wordcount: 360
 ht-degree: 63%
@@ -62,5 +53,6 @@ Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sa
 
 ## Étapes suivantes
 
-Pour lancer des appels à l’aide de l’API [!DNL Segmentation Service], sélectionnez l’un des guides de point d’entrée disponibles à l’aide du volet de navigation de gauche ou dans la présentation du guide de développement [&#128279;](./overview.md)
+Pour lancer des appels à l’aide de l’API [!DNL Segmentation Service], sélectionnez l’un des guides de point d’entrée disponibles à l’aide du volet de navigation de gauche ou dans la présentation du guide de développement [](./overview.md)
+
 

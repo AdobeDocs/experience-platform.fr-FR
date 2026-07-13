@@ -6,11 +6,9 @@ type: Tutorial
 description: Découvrez comment supprimer des flux de données de lots et de diffusion en continu à l’aide de l’API Flow Service.
 exl-id: ea9040b1-3a40-493d-86f0-27deef09df07
 TQID: https://experienceleague.adobe.com/Z7UYXXZQNH--E0B9GAma24TP4Q8fdXaEgMRWgC1PFQo
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 18c3bd1c361dc9e284ede73aa84d188b76ef45c0
 workflow-type: tm+mt
 source-wordcount: 332
 ht-degree: 89%
@@ -70,4 +68,5 @@ Une réponse réussie renvoie un état HTTP 204 (pas de contenu) et un corps vi
 Vous êtes arrivé au bout de ce tutoriel, félicitations ! Grâce à celui-ci, vous avez utilisé lʼAPI [!DNL Flow Service] pour supprimer un flux de données existant.
 
 Pour obtenir des instructions sur la façon dʼeffectuer ces opérations à lʼaide de lʼinterface utilisateur, suivez le tutoriel [Supprimer des flux de données dans l’interface utilisateur](../../tutorials/ui/delete.md).
+
 

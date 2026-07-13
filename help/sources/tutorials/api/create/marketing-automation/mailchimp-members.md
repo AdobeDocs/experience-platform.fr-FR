@@ -5,16 +5,11 @@ title: Créer un flux de données pour les membres Mailchimp à l’aide de l’
 description: Découvrez comment connecter Adobe Experience Platform aux membres MailChimp à l’aide de l’API Flow Service.
 exl-id: 900d4073-129c-47ba-b7df-5294d25a7219
 TQID: https://experienceleague.adobe.com/3A8QDXhr-AVaDv58Dxmsm02HLv6d6-Yu2hpU5-Yggjw
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 18c3bd1c361dc9e284ede73aa84d188b76ef45c0
 workflow-type: tm+mt
 source-wordcount: 2157
 ht-degree: 76%
@@ -651,3 +646,4 @@ Supprimez votre flux de données en adressant une requête DELETE à l’API [!D
 ### Supprimer votre compte
 
 Supprimez votre compte en adressant une requête DELETE à l’API [!DNL Flow Service] et en fournissant l’identifiant de connexion de base du compte que vous souhaitez supprimer. Pour obtenir des exemples d’API complets, consultez le guide sur la [suppression de votre compte source à l’aide de l’API](../../delete.md).
+

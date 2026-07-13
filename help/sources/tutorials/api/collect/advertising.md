@@ -6,15 +6,11 @@ type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une application publicitaire tierce et les ingérer dans Experience Platform à l’aide des connecteurs source et de l’API Flow Service.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
 TQID: https://experienceleague.adobe.com/252Izmu2BYp2a-Bnrer4YBhZOPlz-QhfYfaCFgQ2gvQ
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 18c3bd1c361dc9e284ede73aa84d188b76ef45c0
 workflow-type: tm+mt
 source-wordcount: 1386
 ht-degree: 75%
@@ -703,4 +699,5 @@ Vous êtes arrivé au bout de ce tutoriel, félicitations ! Grâce à celui-ci,
 
 * [Vue d’ensemble du profil client en temps réel](../../../../profile/home.md)
 * [Présentation de l’espace de travail de science des données](../../../../data-science-workspace/home.md)
+
 

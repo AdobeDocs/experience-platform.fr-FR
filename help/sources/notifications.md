@@ -5,13 +5,10 @@ solution: Experience Platform
 title: Notifications d’exécution de flux
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
 TQID: https://experienceleague.adobe.com/JdgeTJTvPjulqgpVIw27s1eiV0SD2NOeXbSPbMNlyEs
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 18c3bd1c361dc9e284ede73aa84d188b76ef45c0
 workflow-type: tm+mt
 source-wordcount: 786
 ht-degree: 15%
@@ -322,7 +319,7 @@ La réponse suivante est un exemple d’exécution de flux ayant échoué, avec 
 
 ## Étapes suivantes
 
-Vous pouvez désormais vous abonner à des événements qui vous permettent de recevoir des notifications en temps réel sur les statuts d’exécution de vos flux. Pour plus d’informations sur les exécutions de flux et les sources, consultez la [&#x200B; présentation des sources &#x200B;](./home.md).
+Vous pouvez désormais vous abonner à des événements qui vous permettent de recevoir des notifications en temps réel sur les statuts d’exécution de vos flux. Pour plus d’informations sur les exécutions de flux et les sources, consultez la [ présentation des sources ](./home.md).
 
 ## Annexe
 
@@ -336,4 +333,5 @@ Des erreurs d’ingestion peuvent se produire lorsque les données sont copiées
 | ---------- | ----------- |
 | `CONNECTOR-1001-500` | Une erreur s’est produite lors de la copie des données à partir d’une source. |
 | `CONNECTOR-2001-500` | Une erreur s’est produite lors du traitement des données copiées vers [!DNL Experience Platform]. Cette erreur peut concerner l’analyse, la validation ou la transformation. |
+
 

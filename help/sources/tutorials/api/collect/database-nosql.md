@@ -4,20 +4,12 @@ type: Tutorial
 description: Découvrez comment utiliser l’API Flow Service pour créer un flux de données et ingérer les données de votre base de données dans Experience Platform.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
 TQID: https://experienceleague.adobe.com/a-C-FvRuLWfqiQlmpLVqlr-7zuyadewGuybBKtbDc-U
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2:
-  - id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2: id: b572b7ff-a413-4173-b2b4-d7d3874f1b9b
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 18c3bd1c361dc9e284ede73aa84d188b76ef45c0
 workflow-type: tm+mt
 source-wordcount: 1522
 ht-degree: 69%
@@ -26,7 +18,7 @@ ht-degree: 69%
 
 # Créez un flux de données pour les sources de base de données à l’aide de l’API [!DNL Flow Service].
 
-Lisez ce tutoriel pour savoir comment créer un flux de données et ingérer des données de votre base de données dans Adobe Experience Platform à l’aide de l’API [[!DNL Flow Service] &#x200B;](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Lisez ce tutoriel pour savoir comment créer un flux de données et ingérer des données de votre base de données dans Adobe Experience Platform à l’aide de l’API [[!DNL Flow Service] ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
@@ -127,7 +119,7 @@ curl -X POST \
 | -------- | ----------- |
 | `baseConnectionId` | Identifiant de connexion de votre source de base de données. |
 | `params.tableName` | Chemin d’accès au fichier source. |
-| `params.cdcEnabled` | Valeur booléenne qui indique si la capture de l’historique des modifications est activée. Lorsqu’elle est utilisée avec des schémas relationnels, la capture de données modifiées permet de suivre les insertions, les mises à jour et les suppressions pour que le jeu de données cible reste synchronisé avec la source. Cette propriété est prise en charge par les sources de base de données suivantes : <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> Pour une présentation de cette fonctionnalité, consultez la présentation de Data Mirror [&#128279;](../../../../xdm/data-mirror/overview.md). Pour plus d’informations sur l’implémentation, consultez les sections [guide de modification de la capture de données dans les sources](../change-data-capture.md) et [référence technique des schémas relationnels](../../../../xdm/schema/relational.md). |
+| `params.cdcEnabled` | Valeur booléenne qui indique si la capture de l’historique des modifications est activée. Lorsqu’elle est utilisée avec des schémas relationnels, la capture de données modifiées permet de suivre les insertions, les mises à jour et les suppressions pour que le jeu de données cible reste synchronisé avec la source. Cette propriété est prise en charge par les sources de base de données suivantes : <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> Pour une présentation de cette fonctionnalité, consultez la présentation de Data Mirror [](../../../../xdm/data-mirror/overview.md). Pour plus d’informations sur l’implémentation, consultez les sections [guide de modification de la capture de données dans les sources](../change-data-capture.md) et [référence technique des schémas relationnels](../../../../xdm/schema/relational.md). |
 | `connectionSpec.id` | Identifiant de spécification de connexion de la source de votre base de données. Consultez l’ [annexe](#appendix) pour obtenir une liste des identifiants de spécification de base de données. |
 
 **Réponse**
@@ -727,4 +719,5 @@ La section suivante répertorie les différents connecteurs de source de stockag
 | [!DNL MySQL] | `26d738e0-8963-47ea-aadf-c60de735468a` |
 | [!DNL Oracle] | `d6b52d86-f0f8-475f-89d4-ce54c8527328` |
 | [!DNL PostgreSQL] | `74a1c565-4e59-48d7-9d67-7c03b8a13137` |
+
 

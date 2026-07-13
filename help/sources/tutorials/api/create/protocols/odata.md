@@ -6,11 +6,9 @@ type: Tutorial
 description: Découvrez comment connecter OData générique à Adobe Experience Platform à l’aide de l’API Flow Service.
 exl-id: 45b302cb-1a43-4fab-a8a2-cb4e1ee129f9
 TQID: https://experienceleague.adobe.com/-bYhTi1uQq3dmgLVXOoAURqMdWVwbrjzLYO-afpAPm0
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 18c3bd1c361dc9e284ede73aa84d188b76ef45c0
 workflow-type: tm+mt
 source-wordcount: 440
 ht-degree: 57%
@@ -108,5 +106,6 @@ Une réponse réussie renvoie la nouvelle connexion, y compris son identifiant d
 Ce tutoriel vous a permis de créer une connexion de base à [!DNL Generic REST OData] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants :
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer les données de protocoles dans Experience Platform à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/protocols.md)
+* [Créez un flux de données pour importer les données de protocoles dans Experience Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/protocols.md)
+
 

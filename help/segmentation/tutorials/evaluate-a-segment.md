@@ -5,21 +5,12 @@ type: Tutorial
 description: Suivez ce tutoriel pour savoir comment évaluer les définitions de segment et accéder aux résultats de la segmentation à l’aide de l’API Adobe Experience Platform Segmentation Service.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
 TQID: https://experienceleague.adobe.com/0A-KjwiR4oMhs-NrKYc-1PprSuX8vkaKlBMDdeBwAkg
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12bid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 18c3bd1c361dc9e284ede73aa84d188b76ef45c0
 workflow-type: tm+mt
 source-wordcount: 1622
 ht-degree: 47%
@@ -41,7 +32,7 @@ Ce tutoriel nécessite une compréhension pratique des différents services [!DN
 
 ### En-têtes requis
 
-Ce tutoriel nécessite également que vous ayez suivi le [&#x200B; tutoriel sur l’authentification &#x200B;](/help/landing/api-authentication.md) pour passer avec succès des appels aux API [!DNL Experience Platform]. Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
+Ce tutoriel nécessite également que vous ayez suivi le [ tutoriel sur l’authentification ](/help/landing/api-authentication.md) pour passer avec succès des appels aux API [!DNL Experience Platform]. Le tutoriel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
@@ -103,13 +94,13 @@ Une tâche de segmentation est un processus asynchrone qui crée une audience à
 
 Vous pouvez créer une tâche de segmentation en effectuant une requête POST vers le point d’entrée `/segment/jobs` dans l’API [!DNL Real-Time Customer Profile].
 
-Vous trouverez des informations plus détaillées sur l’utilisation de ce point d’entrée dans le guide [&#x200B; point d’entrée des tâches de segment &#x200B;](../api/segment-jobs.md#create)
+Vous trouverez des informations plus détaillées sur l’utilisation de ce point d’entrée dans le guide [ point d’entrée des tâches de segment ](../api/segment-jobs.md#create)
 
 ### Recherche de l’état de la tâche de segmentation
 
 Vous pouvez utiliser l’`id` pour une tâche de segmentation spécifique afin d’effectuer une requête de recherche (GET) pour afficher l’état actuel de la tâche.
 
-Vous trouverez des informations plus détaillées sur l’utilisation de ce point d’entrée dans le guide [&#x200B; point d’entrée des tâches de segment &#x200B;](../api/segment-jobs.md#get)
+Vous trouverez des informations plus détaillées sur l’utilisation de ce point d’entrée dans le guide [ point d’entrée des tâches de segment ](../api/segment-jobs.md#get)
 
 ## Interprétation des résultats des tâches de segmentation
 
@@ -246,4 +237,5 @@ Pour obtenir des instructions détaillées sur l’utilisation de l’API [!DNL 
 Vous pouvez également accéder aux données de définition de segment correctement exportées à l’aide de [!DNL Adobe Experience Platform Query Service]. À l’aide de l’interface utilisateur ou de l’API RESTful, [!DNL Query Service] vous permet d’écrire, de valider et d’exécuter des requêtes sur les données de l’[!DNL Data Lake].
 
 Pour plus d’informations sur la manière d’interroger les données d’audience, consultez la documentation sur [[!DNL Query Service]](../../query-service/home.md).
+
 

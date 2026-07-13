@@ -4,11 +4,9 @@ title: Envoyer votre Source
 description: Le document suivant décrit les étapes à suivre pour tester et vérifier une nouvelle source à l’aide de l’API Flow Service et intégrer une nouvelle source par le biais de sources en libre-service (SDK par lots).
 exl-id: 9e945ba1-51b6-40a9-b92f-e0a52b3f92fa
 TQID: https://experienceleague.adobe.com/IsP-D4nIT4tayfQukgV38M7kn3tIq2I3UyDeOgx0mb8
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 18c3bd1c361dc9e284ede73aa84d188b76ef45c0
 workflow-type: tm+mt
 source-wordcount: 841
 ht-degree: 10%
@@ -26,7 +24,7 @@ Le document suivant décrit les étapes à suivre pour tester et déboguer votre
 * Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Experience Platform, consultez le guide [Prise en main des API Experience Platform](../../../landing/api-guide.md).
 * Pour plus d’informations sur la génération de vos informations d’identification pour les API Experience Platform, consultez le tutoriel sur l’[authentification et accès aux API Experience Platform](../../../landing/api-authentication.md).
 * Pour plus d’informations sur la configuration de [!DNL Postman] pour les API Experience Platform, consultez le tutoriel sur [configuration de Developer Console et  [!DNL Postman]](../../../landing/postman.md).
-* Pour faciliter votre processus de test et de débogage, téléchargez ici l’environnement et la collection de vérification des sources en libre-service [&#128279;](../assets/sdk-verification.zip) et suivez les étapes décrites ci-dessous.
+* Pour faciliter votre processus de test et de débogage, téléchargez ici l’environnement et la collection de vérification des sources en libre-service ](../assets/sdk-verification.zip) et suivez les étapes décrites ci-dessous.[
 
 ## Tester votre source
 
@@ -94,4 +92,5 @@ L’interface [!DNL Runner] s’affiche, vous permettant de configurer l’ordre
 ## Envoyer votre source
 
 Une fois que votre source est en mesure de terminer l’ensemble du workflow, vous pouvez contacter votre représentant Adobe et envoyer votre source pour intégration.
+
 
