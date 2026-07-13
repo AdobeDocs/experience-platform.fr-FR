@@ -3,9 +3,12 @@ title: Modèle CSV vers le point d’entrée de l’API de conversion de schéma
 description: Le point d’entrée /rpc/csv2schema de l’API Schema Registry vous permet d’utiliser des modèles CSV pour créer automatiquement des schémas de modèle de données d’expérience (XDM).
 exl-id: cf08774a-db94-4ea1-a22e-bb06385f8d0e
 TQID: https://experienceleague.adobe.com/5kR3-cOBH1lBfzP0iuY-Z3wmxJh4DlG2jWOBWh5CRRs
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: ce1936c345751033beb6901536d6f56467d51fae
 workflow-type: tm+mt
 source-wordcount: 858
@@ -366,6 +369,6 @@ Une réponse réussie renvoie une payload d’exportation générée à partir d
 
 Après avoir généré la payload d’exportation à partir du fichier CSV, vous pouvez envoyer cette payload au point d’entrée `/rpc/import` pour générer le schéma.
 
-Pour plus d’informations sur la génération de schémas à partir de payloads d’exportation](./import.md) consultez le [ guide de point d’entrée d’importation .
+Pour plus d’informations sur la génération de schémas à partir de payloads d’exportation[&#128279;](./import.md) consultez le  guide de point d’entrée d’importation .
 
 

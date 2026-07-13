@@ -5,9 +5,12 @@ title: Explorer une connexion eCommerce à l’aide de l’API Flow Service
 description: Ce tutoriel utilise l’API Flow Service pour explorer les connexions eCommerce.
 exl-id: 832ce399-6c9f-40da-8e7c-5434503c16b6
 TQID: https://experienceleague.adobe.com/oWl85RUwdwn8MKBlxIW6EzVISNdSKV0H22RQpk7ZAvs
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: ce1936c345751033beb6901536d6f56467d51fae
 workflow-type: tm+mt
 source-wordcount: 570

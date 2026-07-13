@@ -3,8 +3,10 @@ title: Mettre à jour des flux de données à l’aide de l’API Flow Service
 description: Découvrez comment créer un flux de données, y compris son nom, sa description et son planning à l’aide de l’API Flow Service.
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
 TQID: https://experienceleague.adobe.com/A9CUkHDJHIucIGXLe8vI7I0z0CWGJu9LmCBX5sl-lUo
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: ce1936c345751033beb6901536d6f56467d51fae
 workflow-type: tm+mt
 source-wordcount: 691

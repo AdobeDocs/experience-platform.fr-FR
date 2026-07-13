@@ -6,8 +6,10 @@ type: Tutorial
 description: Découvrez comment supprimer un compte à l’aide de l’API Flow Service.
 exl-id: 3d07ab7d-c012-472e-8db4-b19e3936dcba
 TQID: https://experienceleague.adobe.com/i1mkGngo5K1Gast4i3t6fvD831rAAtJN-YitHzhu1-Q
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: ce1936c345751033beb6901536d6f56467d51fae
 workflow-type: tm+mt
 source-wordcount: 346

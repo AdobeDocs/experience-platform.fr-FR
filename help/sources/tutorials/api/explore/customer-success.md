@@ -5,9 +5,13 @@ title: Explorer un système de succès client à l’aide de l’API Flow Servic
 description: Ce tutoriel utilise l’API Flow Service pour explorer les systèmes de succès client (CS).
 exl-id: 453be69d-3d72-4987-81cd-67fa3be7ee59
 TQID: https://experienceleague.adobe.com/8rp9dvXGmxhvj39GnRiosIqmBlm6uHxNBO4fZDC443U
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: ce1936c345751033beb6901536d6f56467d51fae
 workflow-type: tm+mt
 source-wordcount: 602

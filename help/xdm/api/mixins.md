@@ -5,10 +5,16 @@ title: Point d’entrée de l’API Mixins
 description: Le point d’entrée /mixins de l’API Schema Registry vous permet de gérer les mixins XDM par programmation dans votre application d’expérience.
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
 TQID: https://experienceleague.adobe.com/qghnMoW6k-ET8T8rSIFM0yszkgh-WYeWWfPe9nWpp68
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6f
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: ce1936c345751033beb6901536d6f56467d51fae
 workflow-type: tm+mt
 source-wordcount: 1209
@@ -22,13 +28,13 @@ ht-degree: 16%
 >
 >Les mixins ont été renommés en groupes de champs de schéma. Par conséquent, le point d’entrée `/mixins` a été abandonné au profit du point d’entrée `/fieldgroups`.
 >
->Bien que `/mixins` continue à être géré en tant que point d’entrée hérité, il est vivement recommandé d’utiliser `/fieldgroups` pour les nouvelles mises en œuvre de l’API Schema Registry dans vos applications d’expérience. Pour plus d’informations, consultez le [ guide des points d’entrée des groupes de champs ](./field-groups.md) .
+>Bien que `/mixins` continue à être géré en tant que point d’entrée hérité, il est vivement recommandé d’utiliser `/fieldgroups` pour les nouvelles mises en œuvre de l’API Schema Registry dans vos applications d’expérience. Pour plus d’informations, consultez le [&#x200B; guide des points d’entrée des groupes de champs &#x200B;](./field-groups.md) .
 
 Les mixins sont des composants réutilisables qui définissent un ou plusieurs champs représentant un concept particulier, tels qu’une personne, une adresse postale ou un environnement de navigateur web. Les mixins sont destinés à être inclus dans le cadre d’un schéma qui implémente une classe compatible, en fonction du comportement des données qu’ils représentent (enregistrement ou série temporelle). Le point d’entrée `/mixins` de l’API [!DNL Schema Registry] vous permet de gérer par programmation les mixins dans votre application d’expérience.
 
 ## Prise en main
 
-Le point d’entrée utilisé dans ce guide fait partie de l’API ](https://developer.adobe.com/experience-platform-apis/references/schema-registry). [[!DNL Schema Registry] Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
+Le point d’entrée utilisé dans ce guide fait partie de l’API [&#128279;](https://developer.adobe.com/experience-platform-apis/references/schema-registry). [!DNL Schema Registry] Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
 ## Récupération d’une liste de mixins {#list}
 
@@ -756,6 +762,6 @@ curl -X DELETE \
 
 Une réponse réussie renvoie un statut HTTP 204 (Pas de contenu) et un corps vide.
 
-Vous pouvez confirmer la suppression en tentant d’adresser une [ requête de recherche (GET)](#lookup) au mixin . Vous devez inclure un en-tête `Accept` dans la requête, mais vous devriez recevoir le statut HTTP 404 (Not Found), car le mixin a été supprimé du registre des schémas.
+Vous pouvez confirmer la suppression en tentant d’adresser une [&#x200B; requête de recherche (GET)](#lookup) au mixin . Vous devez inclure un en-tête `Accept` dans la requête, mais vous devriez recevoir le statut HTTP 404 (Not Found), car le mixin a été supprimé du registre des schémas.
 
 
