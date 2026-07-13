@@ -4,13 +4,10 @@ title: Explorer des dossiers d’espace de stockage à l’aide de l’API Flow 
 description: Ce tutoriel utilise l’API Flow Service pour explorer un système de stockage cloud tiers.
 exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
 TQID: https://experienceleague.adobe.com/Pvy6OInQXlukyhhuOkPWf6TB-sGKuFKHpxgjXzRkTtk
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: c132d929-fa62-4271-803e-b823be07b914
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: c132d929-fa62-4271-803e-b823be07b914
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: ce1936c345751033beb6901536d6f56467d51fae
 workflow-type: tm+mt
 source-wordcount: 712
 ht-degree: 14%
@@ -176,4 +173,5 @@ L’[[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-ap
 ## Étapes suivantes
 
 En suivant ce tutoriel, vous avez exploré votre système de stockage dans le cloud, trouvé le chemin d’accès au fichier que vous souhaitez importer dans [!DNL Experience Platform] et consulté sa structure. Vous pouvez utiliser ces informations dans le tutoriel suivant pour [collecter des données à partir de votre espace de stockage dans le cloud et les importer dans Experience Platform](../collect/cloud-storage.md).
+
 

@@ -2,7 +2,7 @@
 title: Point d’entrée des extensions
 description: Découvrez comment effectuer des appels au point d’entrée /extensions dans l’API Reactor.
 exl-id: cc02b2aa-d107-463a-930c-5a9fcc5b4a5a
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: ce1936c345751033beb6901536d6f56467d51fae
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 98%
@@ -1417,4 +1417,5 @@ Une réponse réussie renvoie les détails de la propriété détentrice de l’
   }
 }
 ```
+
 

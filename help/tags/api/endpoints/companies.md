@@ -2,7 +2,7 @@
 title: Point d’entrée des entreprises
 description: Découvrez comment effectuer des appels vers le point d’entrée dans l’API Reactor.
 exl-id: ee435358-ed34-4e0c-93af-796133fb11fc
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: ce1936c345751033beb6901536d6f56467d51fae
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 92%
@@ -185,4 +185,5 @@ Une réponse réussie renvoie les détails de la société.
   }
 }
 ```
+
 

@@ -2,7 +2,7 @@
 title: Point dʼentrée des rappels
 description: Découvrez comment effectuer des appels vers le point dʼentrée /callbacks dans lʼAPI Reactor.
 exl-id: dd980f91-89e3-4ba0-a6fc-64d66b288a22
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: ce1936c345751033beb6901536d6f56467d51fae
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 96%
@@ -380,4 +380,5 @@ curl -X DELETE \
 **Réponse**
 
 Une réponse réussie renvoie un état HTTP 204 (No Content) sans corps de réponse, indiquant que le rappel a été supprimé.
+
 
