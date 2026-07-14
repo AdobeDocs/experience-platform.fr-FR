@@ -126,6 +126,6 @@ Lorsque vous transférez des [!DNL Experience Platform] à d’autres produits A
 ## Ressources supplémentaires {#additional-resources}
 
 - [Comment Adobe Experience Platform et les applications fonctionnent ensemble &#x200B;](apps-overview.md) : applications [!DNL Experience Platform] et comment elles partagent des données.
-- [Présentation de Adobe Experience Platform &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/landing/home) : principaux points d&#39;entrée de l&#39;aide.
+- [Présentation de Adobe Experience Platform &#x200B;](https://experienceleague.adobe.com/fr/docs/experience-platform/landing/home) : principaux points d&#39;entrée de l&#39;aide.
 - [Plans directeurs d’expérience digitale](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/overview/experience-cloud) : architectures de référence pour les solutions Adobe.
-- [Adobe Experience Platform et applications (diagrammes d&#39;architecture)](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications) : diagrammes de pile visuelle.
+- [Adobe Experience Platform et applications (diagrammes d&#39;architecture)](https://experienceleague.adobe.com/fr/docs/blueprints-learn/architecture/architecture-overview/platform-applications) : diagrammes de pile visuelle.
