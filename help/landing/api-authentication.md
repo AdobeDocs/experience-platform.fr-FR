@@ -19,7 +19,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 2274
 ht-degree: 12%
@@ -327,4 +327,5 @@ Consultez les ressources supplémentaires ci-dessous pour obtenir de l’aide su
 En lisant ce document, vous avez rassemblé et testé avec succès vos informations d’identification d’accès pour les API Experience Platform. Vous pouvez désormais suivre les exemples d’appels API fournis dans toute la [documentation](../landing/documentation/overview.md).
 
 En plus des valeurs d’authentification que vous avez collectées dans ce tutoriel, de nombreuses API d’Experience Platform nécessitent également qu’un `{SANDBOX_NAME}` valide soit fourni comme en-tête. Pour plus d’informations, consultez la [Présentation des sandbox](../sandboxes/home.md).
+
 

@@ -10,7 +10,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: ce1936c345751033beb6901536d6f56467d51fae
 workflow-type: tm+mt
 source-wordcount: 851
 ht-degree: 20%
@@ -132,3 +132,4 @@ Une fenêtre pop-up s’affiche, vous fournissant une liste des alertes de sourc
 ## Étapes suivantes
 
 Ce document fournit un guide détaillé sur la manière de vous abonner à des alertes contextuelles pour vos flux de données sources. Pour plus d’informations, consultez le [guide de l’interface utilisateur des alertes](../../../observability/alerts/ui.md).
+

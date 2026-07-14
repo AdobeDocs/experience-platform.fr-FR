@@ -12,7 +12,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 543
 ht-degree: 88%
@@ -240,4 +240,5 @@ Une réponse réussie renvoie les détails du libellé personnalisé, avec le co
 ## Étapes suivantes
 
 Ce guide couvre lʼutilisation du point d’entrée `/labels` dans lʼAPI Policy Service. Pour obtenir des instructions détaillées sur lʼapplication de libellés aux jeux de données et aux champs, consultez le [guide de lʼAPI des libellés des jeux de données](../labels/dataset-api.md).
+
 

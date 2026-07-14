@@ -10,7 +10,7 @@ feature_v2:
   - id: c132d929-fa62-4271-803e-b823be07b914
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: 18c3bd1c361dc9e284ede73aa84d188b76ef45c0
 workflow-type: tm+mt
 source-wordcount: 1719
 ht-degree: 30%
@@ -728,5 +728,6 @@ Si l’en-tête `Authorization` n’est pas présent ou si un jeton d’accès n
     }
 }
 ```
+
 
 

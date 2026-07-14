@@ -11,7 +11,7 @@ role_v2:
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 268
 ht-degree: 17%
@@ -41,4 +41,5 @@ Certaines réglementations nécessitent le consentement explicite du client avan
 ## Étapes suivantes
 
 Pour commencer à effectuer des appels à l’aide de l’API Privacy Service, lisez le [&#x200B; guide de prise en main &#x200B;](./getting-started.md) puis sélectionnez l’un des guides des points d’entrée pour savoir comment utiliser des points d’entrée spécifiques.
+
 

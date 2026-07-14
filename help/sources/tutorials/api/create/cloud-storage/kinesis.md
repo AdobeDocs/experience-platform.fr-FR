@@ -8,7 +8,7 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: 18c3bd1c361dc9e284ede73aa84d188b76ef45c0
 workflow-type: tm+mt
 source-wordcount: 773
 ht-degree: 50%
@@ -178,4 +178,5 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle conne
 ## Étapes suivantes
 
 Ce tutoriel vous a permis de créer une connexion source [!DNL Kinesis] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet ID de connexion source dans le tutoriel suivant pour [créer un flux de données en continu à l’aide de l’API  [!DNL Flow Service] &#x200B;](../../collect/streaming.md).
+
 

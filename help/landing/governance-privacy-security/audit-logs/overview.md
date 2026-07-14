@@ -19,7 +19,7 @@ topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 1654
 ht-degree: 35%
@@ -193,4 +193,5 @@ Ce guide explique comment gérer les journaux d’audit dans Experience Platform
 Pour mieux comprendre les journaux d’audit dans Experience Platform, regardez la vidéo suivante :
 
 >[!VIDEO](https://video.tv.adobe.com/v/344646?captions=fre_fr&quality=12&learn=on)
+
 

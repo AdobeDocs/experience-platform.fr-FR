@@ -15,7 +15,7 @@ role_v2:
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: 18c3bd1c361dc9e284ede73aa84d188b76ef45c0
 workflow-type: tm+mt
 source-wordcount: 1241
 ht-degree: 37%
@@ -584,4 +584,5 @@ Ce tutoriel vous a permis de créer un flux de données pour collecter des donn�
 
 - [Vue d’ensemble du profil client en temps réel](../../../../profile/home.md)
 - [Présentation de l’espace de travail de science des données](../../../../data-science-workspace/home.md)
+
 

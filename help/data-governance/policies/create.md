@@ -17,7 +17,7 @@ role_v2:
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 1210
 ht-degree: 97%
@@ -437,4 +437,5 @@ En suivant ce tutoriel, vous avez créé une politique d’utilisation des donn�
 Pour plus d’informations sur les différentes opérations disponibles dans l’API [!DNL Policy Service], consultez le [guide de développement de Policy Service](../api/getting-started.md). Pour plus d’informations sur l’application des politiques pour les données [!DNL Real-Time Customer Profile], consultez le tutoriel sur [l’application de la conformité d’utilisation des données aux audiences](../../segmentation/tutorials/governance.md).
 
 Pour découvrir comment gérer les politiques d’utilisation dans l’interface utilisateur [!DNL Experience Platform], consultez le [guide d’utilisation des politiques](user-guide.md).
+
 

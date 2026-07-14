@@ -20,7 +20,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 1723
 ht-degree: 50%
@@ -600,4 +600,5 @@ Le tableau suivant affiche les codes d’état renvoyés par les messages de ré
 | 429 | Trop de requêtes au cours d’une période précise. |
 | 500 | Erreur lors du traitement du payload. Voir le corps de la réponse pour un message d’erreur plus spécifique (par exemple, le schéma Payload du message n’est pas spécifié ou ne correspond pas à la définition XDM dans [!DNL Experience Platform]). |
 | 503 | Le service n’est pas disponible pour le moment. Nous conseillons aux clients de réessayer au moins 3 fois en utilisant une stratégie de backoff exponentiel. |
+
 

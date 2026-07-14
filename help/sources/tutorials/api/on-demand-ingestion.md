@@ -10,7 +10,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: ce1936c345751033beb6901536d6f56467d51fae
 workflow-type: tm+mt
 source-wordcount: 847
 ht-degree: 10%
@@ -202,4 +202,5 @@ Une réponse réussie renvoie les détails de l’exécution de flux nouvellemen
 ## Surveiller les exécutions de flux
 
 Une fois votre exécution de flux créée, vous pouvez surveiller les données ingérées pour afficher des informations sur les exécutions de flux, l’état d’achèvement et les erreurs. Pour surveiller vos exécutions de flux à l’aide de l’API , consultez le tutoriel sur la [surveillance des flux de données dans l’API](./monitor.md). Pour surveiller vos exécutions de flux à l’aide de l’interface utilisateur d’Experience Platform, consultez le guide sur la [surveillance des flux de données sources à l’aide du tableau de bord de surveillance](../../../dataflows/ui/monitor-sources.md).
+
 

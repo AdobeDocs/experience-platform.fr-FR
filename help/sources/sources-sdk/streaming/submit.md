@@ -10,7 +10,7 @@ feature_v2:
   - id: c132d929-fa62-4271-803e-b823be07b914
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: 18c3bd1c361dc9e284ede73aa84d188b76ef45c0
 workflow-type: tm+mt
 source-wordcount: 1288
 ht-degree: 12%
@@ -117,4 +117,5 @@ Enfin, vous devez récupérer le point d’entrée de flux continu de votre flux
 ## Envoyer votre source
 
 Une fois que votre source est en mesure de terminer l’ensemble du workflow, vous pouvez contacter votre représentant Adobe et envoyer votre source pour intégration à d’autres organisations Experience Platform.
+
 

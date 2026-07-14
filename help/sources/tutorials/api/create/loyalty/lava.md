@@ -1,7 +1,7 @@
 ---
 title: Créez une connexion source et un flux de données pour diffuser des données LAVA à l’aide de l’API Flow Service
 description: Découvrez comment importer des données de flux de LAVA vers Adobe Experience Platform à l’aide de l’API Flow Service.
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: 18c3bd1c361dc9e284ede73aa84d188b76ef45c0
 workflow-type: tm+mt
 source-wordcount: '1793'
 ht-degree: 39%
@@ -1078,4 +1078,5 @@ Supprimez votre flux de données en adressant une requête DELETE à l’API [!D
 ### Supprimer votre compte
 
 Supprimez votre compte en adressant une requête DELETE à l’API [!DNL Flow Service] et en fournissant l’identifiant de connexion de base du compte que vous souhaitez supprimer. Pour obtenir des exemples d’API complets, consultez le guide sur la [suppression de votre compte source à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html?lang=fr).
+
 

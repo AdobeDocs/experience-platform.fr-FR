@@ -24,7 +24,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
   - id: fd2e3797-f2ea-4b36-a9af-52acf5e90513
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 1895
 ht-degree: 12%
@@ -120,4 +120,5 @@ Vous pouvez également surveiller les activités d’Experience Platform à l’
 ## Étapes suivantes
 
 Ce tutoriel vous a permis de bénéficier d’une introduction générale à un flux simple de bout en bout pour Experience Platform. Pour en savoir plus sur Adobe Experience Platform, commencez par lire la [Présentation dʼExperience Platform](./home.md). Pour en savoir plus sur l’utilisation de l’interface utilisateur d’Experience Platform et de l’API Experience Platform, veuillez lire respectivement le [guide de l’interface utilisateur d’Experience Platform](./ui-guide.md) et le [guide de l’API Experience Platform](./api-guide.md).
+
 

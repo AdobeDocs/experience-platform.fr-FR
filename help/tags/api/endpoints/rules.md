@@ -2,7 +2,7 @@
 title: Point d’entrée des règles
 description: Découvrez comment effectuer des appels au point d’entrée /règles dans l’API Reactor.
 exl-id: 79ef4389-e4b7-461e-8579-16a1a78cdd43
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: ce1936c345751033beb6901536d6f56467d51fae
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 95%
@@ -1052,4 +1052,5 @@ Une réponse réussie renvoie les détails de la propriété de la règle spéci
   }
 }
 ```
+
 

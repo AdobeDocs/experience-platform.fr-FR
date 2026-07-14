@@ -13,7 +13,7 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 979
 ht-degree: 36%
@@ -397,4 +397,5 @@ Vous trouverez ci-dessous un exemple de réponse de récupération du fichier d�
     "_filename": "parsing_errors_0.json"
 }
 ```
+
 

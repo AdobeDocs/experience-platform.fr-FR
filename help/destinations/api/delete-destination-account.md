@@ -15,7 +15,7 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 756
 ht-degree: 34%
@@ -197,3 +197,4 @@ Les points d’entrée d’API de ce tutoriel suivent les principes généraux d
 ## Étapes suivantes {#next-steps}
 
 Vous avez correctement utilisé l’API [!DNL Flow Service] pour supprimer les comptes de destination existants. Pour plus d’informations sur l’utilisation des destinations, consultez la [présentation des destinations](/help/destinations/home.md).
+

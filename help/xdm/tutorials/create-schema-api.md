@@ -15,7 +15,7 @@ role_v2:
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: ce1936c345751033beb6901536d6f56467d51fae
 workflow-type: tm+mt
 source-wordcount: 2909
 ht-degree: 30%
@@ -3222,3 +3222,4 @@ Vous trouverez ci-dessous le schéma Loyalty Members au format JSON :
 ```
 
 +++
+

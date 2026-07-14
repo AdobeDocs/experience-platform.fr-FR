@@ -15,7 +15,7 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 1313
 ht-degree: 80%
@@ -484,4 +484,5 @@ Pour plus d’informations sur la mise à jour des schémas, consultez le [guide
 Une fois que vous avez mis à jour le schéma, vous pouvez à nouveau suivre les étapes de ce tutoriel pour ingérer de nouvelles données conformes au schéma révisé.
 
 Il est important de se rappeler que l’évolution des schémas est purement additive, ce qui signifie que vous ne pouvez pas apporter de modification critique à un schéma une fois qu’il a été enregistré dans le registre et utilisé pour l’ingestion de données. Pour en savoir plus sur les bonnes pratiques de composition de schéma à utiliser avec Adobe Experience Platform, consultez le guide sur les [principes de base de la composition de schémas](../../xdm/schema/composition.md).
+
 

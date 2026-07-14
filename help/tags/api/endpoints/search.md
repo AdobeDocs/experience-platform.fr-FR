@@ -20,7 +20,7 @@ role_v2:
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: ce1936c345751033beb6901536d6f56467d51fae
 workflow-type: tm+mt
 source-wordcount: 673
 ht-degree: 96%
@@ -263,4 +263,5 @@ Il existe aussi dʼautres conventions propres à des champs spécifiques qui app
 | `name` | Correspondance exacte, sensible à la casse |
 | `settings` | Texte avec une analyse partielle des termes, non sensible à la casse |
 | `type` | Correspondance exacte, sensible à la casse |
+
 

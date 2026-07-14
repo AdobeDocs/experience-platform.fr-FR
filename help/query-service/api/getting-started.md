@@ -13,7 +13,7 @@ role_v2:
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 404
 ht-degree: 100%
@@ -69,4 +69,5 @@ Maintenant que vous savez quels en-têtes utiliser, vous êtes prêt(e) à comme
 ## Étapes suivantes
 
 Maintenant que vous avez appris à lancer des appels à l’aide de l’API [!DNL Query Service], vous pouvez créer vos propres requêtes non interactives. Pour plus d’informations sur la création de requêtes, veuillez lire le [guide de référence SQL](../sql/overview.md).
+
 

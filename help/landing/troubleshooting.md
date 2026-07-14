@@ -23,7 +23,7 @@ topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 1936
 ht-degree: 86%
@@ -242,4 +242,5 @@ Voici une liste de guides de dépannage et de documentation de référence sur l
 | [!DNL Flow Service] ([!DNL Sources] et [!DNL Destinations]) | [[!DNL Flow Service API]](https://developer.adobe.com/experience-platform-apis/references/flow-service) |  |
 | [!DNL Real-Time Customer Profile] | [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en) | Guide de dépannage du [[!DNL Profile] &#x200B;](../profile/troubleshooting.md) |
 | Sandbox | [API Sandbox](https://developer.adobe.com/experience-platform-apis/references/sandbox) | [Guide de dépannage des sandbox](../sandboxes/troubleshooting-guide.md) |
+
 

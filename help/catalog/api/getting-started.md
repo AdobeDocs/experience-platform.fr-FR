@@ -13,7 +13,7 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 606
 ht-degree: 57%
@@ -75,4 +75,5 @@ Dans ce document, vous avez découvert les connaissances préalables requises po
 La plupart des exemples de ce guide utilisent le point d’entrée `/dataSets`, mais les principes peuvent être appliqués à d’autres points d’entrée dans [!DNL Catalog] (tels que `/batches`). Consultez la [référence de l’API Catalog Service](https://developer.adobe.com/experience-platform-apis/references/catalog) pour obtenir une liste complète de tous les appels et opérations disponibles pour chaque point d’entrée.
 
 Pour un workflow détaillé qui explique comment l’API [!DNL Catalog] est impliquée dans l’ingestion de données, consultez le tutoriel sur la [création d’un jeu de données](../datasets/create.md).
+
 

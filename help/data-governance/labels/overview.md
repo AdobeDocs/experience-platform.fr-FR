@@ -21,7 +21,7 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 828
 ht-degree: 67%
@@ -89,4 +89,5 @@ L’[API Dataset Service](https://developer.adobe.com/experience-platform-apis/r
 ## Étapes suivantes
 
 Ce document vous a présenté les libellés d’utilisation des données et leur rôle dans le cadre de la gouvernance des données. Reportez-vous à la documentation référencée tout au long de ce guide pour en savoir plus sur la gestion des libellés dans [!DNL Experience Platform].
+
 

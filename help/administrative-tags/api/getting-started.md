@@ -12,7 +12,7 @@ role_v2:
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 269
 ht-degree: 38%
@@ -48,4 +48,5 @@ Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sa
 ## Étapes suivantes
 
 Pour lancer des appels à l’aide de l’API Balises unifiées, sélectionnez l’un des guides de point d’entrée disponibles à l’aide du volet de navigation de gauche ou dans la [présentation du guide de développement](./overview.md)
+
 

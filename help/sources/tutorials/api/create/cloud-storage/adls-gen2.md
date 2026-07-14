@@ -10,7 +10,7 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: 18c3bd1c361dc9e284ede73aa84d188b76ef45c0
 workflow-type: tm+mt
 source-wordcount: 525
 ht-degree: 29%
@@ -115,4 +115,5 @@ Une réponse réussie renvoie les détails de la connexion de base que vous vene
 ## Étapes suivantes
 
 En suivant ce tutoriel, vous avez créé une connexion ADLS Gen2 à l’aide d’API et obtenu un identifiant unique dans le cadre du corps de la réponse. Vous pouvez utiliser cet identifiant de connexion pour [explorer les espaces de stockage dans le cloud à l’aide de l’API Flow Service](../../explore/cloud-storage.md).
+
 

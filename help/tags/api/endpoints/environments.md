@@ -2,7 +2,7 @@
 title: Point d’entrée d’environnements
 description: Découvrez comment effectuer des appels au point d’entrée /environments dans l’API Reactor.
 exl-id: 4c22f799-8338-4cf0-980a-3900d725ab5d
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: ce1936c345751033beb6901536d6f56467d51fae
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 99%
@@ -997,4 +997,5 @@ Une réponse réussie renvoie les détails de la propriété propriétaire de l�
   }
 }
 ```
+
 

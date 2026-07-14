@@ -15,7 +15,7 @@ role_v2:
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 2197
 ht-degree: 95%
@@ -368,4 +368,5 @@ Lors de l’ingestion de données par lots, ce message d’erreur s’affiche lo
 ```
 
 Cette erreur s’affiche lorsqu’une exception inattendue se produit lors de l’ingestion d’un lot. La bonne pratique consiste à programmer vos appels automatisés afin de relancer leurs requêtes à un intervalle de temps donné lors de la réception de cette erreur. Si le problème persiste, contactez votre administrateur système.
+
 

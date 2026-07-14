@@ -18,7 +18,7 @@ role_v2:
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 412
 ht-degree: 52%
@@ -62,4 +62,5 @@ Toutes les requêtes ayant un payload dans le corps de la requête (notamment le
 ## Étapes suivantes
 
 Pour commencer à effectuer des appels à l’aide de l’API [!DNL Real-Time Customer Profile], sélectionnez l’un des guides de point d’entrée disponibles.
+
 

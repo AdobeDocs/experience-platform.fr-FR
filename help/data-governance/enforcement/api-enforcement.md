@@ -14,7 +14,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 1034
 ht-degree: 95%
@@ -390,4 +390,5 @@ Une réponse réussie renvoie l’URL de l’action marketing, les libellés col
 La lecture de ce document vous a permis de comprendre comment identifier les violations de politique lors de l’exécution d’une action marketing sur un jeu de données ou sur un ensemble de libellés d’utilisation des données. En utilisant les données renvoyées dans les réponses de l’API, vous pouvez configurer des protocoles dans votre application d’expérience de façon à appliquer les violations de politique lorsque celles-ci se produisent.
 
 Pour plus d’informations sur la manière dont Experience Platform fournit automatiquement l’application des politiques pour les segments activés, consultez le guide sur l’[application automatique](./auto-enforcement.md).
+
 

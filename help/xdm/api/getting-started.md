@@ -14,7 +14,7 @@ role_v2:
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: ce1936c345751033beb6901536d6f56467d51fae
 workflow-type: tm+mt
 source-wordcount: 1375
 ht-degree: 42%
@@ -276,4 +276,5 @@ Le champ d’exemple suivant illustre un champ XDM formaté correctement avec de
 ## Étapes suivantes
 
 Pour commencer à effectuer des appels à l’aide de l’API [!DNL Schema Registry], sélectionnez l’un des guides de point d’entrée disponibles.
+
 

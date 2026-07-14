@@ -2,7 +2,7 @@
 title: Intégration de Slack pour les alertes destinées aux clients
 description: Découvrez comment connecter Adobe I/O Events à Slack à l’aide d’Adobe App Builder.
 exl-id: 09ce5391-3932-4f51-b330-42d7a7acbe10
-source-git-commit: bbf0a9bfb5601d2cd276e487e7d34c9781f06b97
+source-git-commit: ce1936c345751033beb6901536d6f56467d51fae
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 0%
@@ -318,3 +318,4 @@ Sélectionnez **[!UICONTROL Action d’exécution]** comme méthode de diffusion
 Votre proxy webhook est maintenant configuré. Vous revenez sur la page du proxy Webhook. Vous pouvez tester l’ensemble du flux de bout en bout en sélectionnant l’icône **[!UICONTROL Envoyer un exemple d’événement]** en regard de tout événement configuré.
 
 ![Page du proxy webhook affichant les événements configurés et l’icône Envoyer un exemple d’événement.](../images/alerts/slack-integration/send-sample.png)
+

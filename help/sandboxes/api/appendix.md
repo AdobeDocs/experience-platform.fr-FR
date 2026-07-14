@@ -10,7 +10,7 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 128
 ht-degree: 3%
@@ -33,4 +33,5 @@ L’[[!DNL Sandbox] API](https://developer.adobe.com/experience-platform-apis/re
 | --- | --- |
 | `limit` | Nombre maximal d’enregistrements à renvoyer dans la réponse. |
 | `offset` | Nombre d’entités du premier enregistrement à partir duquel démarrer (décaler) la liste de réponse. |
+
 

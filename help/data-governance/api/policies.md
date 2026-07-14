@@ -12,7 +12,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 1873
 ht-degree: 98%
@@ -737,4 +737,5 @@ Une réponse réussie renvoie la liste mise à jour des politiques de base activ
 ## Étapes suivantes
 
 Une fois que vous avez défini de nouvelles politiques ou mis à jour des politiques existantes, vous pouvez utiliser lʼAPI [!DNL Policy Service] pour tester les actions marketing par rapport à des libellés ou des jeux de données spécifiques et voir si vos politiques génèrent des violations comme prévu. Pour plus dʼinformations, consultez le guide sur les [points d’entrée dʼévaluation des politiques](./evaluation.md).
+
 

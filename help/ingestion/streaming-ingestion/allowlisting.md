@@ -11,7 +11,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 474
 ht-degree: 5%
@@ -78,4 +78,5 @@ Non. Ils sont ouverts jusqu’à ce que vous fournissiez des mappages d’adress
 ### Puis-je envoyer uniquement des adresses IP mises à jour lorsque ma place sur la liste autorisée change ?
 
 Non. Vous devez toujours envoyer la liste complète des mappages de sandbox et d’adresses IP. Les mises à jour partielles (incrémentielles) ne sont pas acceptées.
+
 

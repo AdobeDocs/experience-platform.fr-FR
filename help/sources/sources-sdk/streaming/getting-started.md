@@ -10,7 +10,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: 18c3bd1c361dc9e284ede73aa84d188b76ef45c0
 workflow-type: tm+mt
 source-wordcount: 568
 ht-degree: 20%
@@ -88,4 +88,5 @@ Toutes les requêtes contenant une payload (POST, PUT, PATCH) requièrent un en-
 ## Étapes suivantes
 
 Pour commencer à créer une source avec des sources en libre-service (streaming SDK), consultez le tutoriel sur [la création d’une source](./create.md).
+
 

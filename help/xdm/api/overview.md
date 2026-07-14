@@ -14,7 +14,7 @@ role_v2:
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: ce1936c345751033beb6901536d6f56467d51fae
 workflow-type: tm+mt
 source-wordcount: 1161
 ht-degree: 8%
@@ -110,3 +110,4 @@ Pour plus d’informations sur l’utilisation de ce point d’entrée[&#128279;
 ## Étapes suivantes
 
 Pour commencer à effectuer des appels à lʼaide de lʼAPI Schema Registry, consultez le [guide de prise en main](./getting-started.md), puis sélectionnez lʼun des guides des points dʼentrée pour savoir comment utiliser des points dʼentrée spécifiques.
+

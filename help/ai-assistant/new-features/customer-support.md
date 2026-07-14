@@ -17,7 +17,7 @@ role_v2:
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: e6b31afb0c9c48e8dd2acbe107983b5aabeff926
+source-git-commit: ce1936c345751033beb6901536d6f56467d51fae
 workflow-type: tm+mt
 source-wordcount: 410
 ht-degree: 89%
@@ -78,4 +78,5 @@ Une fois ces étapes effectuées, tous les administrateurs de l’assistance de 
 Pour plus d’informations, regardez la vidéo suivante pour découvrir comment utiliser l’agent du support produit afin de résoudre en toute simplicité les problèmes sans quitter vos workflows.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3443185?captions=fre_fr&learn=on)
+
 

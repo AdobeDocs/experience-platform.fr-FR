@@ -16,7 +16,7 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 9eb5b266c15495d852a671829d46fd127ad33ac9
+source-git-commit: ce1936c345751033beb6901536d6f56467d51fae
 workflow-type: tm+mt
 source-wordcount: 856
 ht-degree: 73%
@@ -323,3 +323,4 @@ Une réponse réussie renvoie les détails du schéma, y compris tous les champs
 En suivant ce tutoriel, vous avez créé un schéma ad hoc. Si un autre tutoriel vous a renvoyé à ce document, vous pouvez désormais utiliser la propriété `$id` de votre schéma ad hoc pour terminer le workflow comme indiqué.
 
 Pour plus d’informations sur l’utilisation de l’API [!DNL Schema Registry], reportez-vous au [guide de développement](../api/getting-started.md).
+

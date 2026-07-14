@@ -11,7 +11,7 @@ role_v2:
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 220
 ht-degree: 34%
@@ -39,4 +39,5 @@ La documentation de l’API exige également que vous ayez suivi le tutoriel [au
 ## Étapes suivantes
 
 Pour lancer des appels à l’aide de l’API du service MTLS, sélectionnez les guides des points d’entrée dans le volet de navigation de gauche ou dans la présentation du guide de développement [&#128279;](./overview.md)
+
 

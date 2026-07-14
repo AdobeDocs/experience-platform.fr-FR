@@ -15,7 +15,7 @@ role_v2:
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 763
 ht-degree: 55%
@@ -213,4 +213,5 @@ Une réponse réussie renvoie des informations concernant votre exécution de fl
 En suivant ce tutoriel, vous avez récupéré des mesures et des informations relatives aux erreurs sur votre flux de données à l’aide de l’API [!DNL Flow Service]. Vous pouvez maintenant continuer à surveiller votre flux de données, en fonction de votre planning d’ingestion, pour suivre son statut et ses taux d’ingestion. Pour plus d’informations sur la surveillance des flux de données pour les sources, consultez le tutoriel [surveillance des flux de données pour les sources à l’aide de l’interface utilisateur](../ui/monitor-sources.md). Pour plus d’informations sur la surveillance des flux de données pour les destinations, consultez le tutoriel [surveillance des flux de données pour les destinations à l’aide de l’interface utilisateur](../ui/monitor-destinations.md).
 
 Pour envoyer plusieurs entités XDM à un flux de données, utilisez un tableau `messages` dans votre requête HTTP ou chargez un fichier (CSV, JSON ou Parquet) contenant plusieurs enregistrements. Pour obtenir des conseils détaillés et connaître les bonnes pratiques, lisez [&#x200B; Comment envoyer plusieurs entités XDM à un flux de données &#x200B;](../../ingestion/tutorials/streaming-multiple-messages.md#send-multiple-xdm-entities-to-a-dataflow).
+
 

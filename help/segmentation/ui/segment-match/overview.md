@@ -26,10 +26,10 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: b70b96248f4884160c6d41730b64ea7fdcc09af3
 workflow-type: tm+mt
-source-wordcount: 2203
-ht-degree: 60%
+source-wordcount: 2147
+ht-degree: 62%
 
 ---
 
@@ -37,10 +37,7 @@ ht-degree: 60%
 
 >[!IMPORTANT]
 >
->Adobe a introduit [!DNL Segment Match] en 2021 pour permettre aux clients de collaborer et d’échanger des audiences. Début 2025, Adobe a introduit [Real-Time CDP Collaboration](https://experienceleague.adobe.com/fr/docs/real-time-cdp-collaboration/using/home), qui est l’approche à plus long terme permettant de répondre à ce cas d’utilisation.
->
->* Pour les clients situés aux États-Unis, au Canada, en Australie, en Nouvelle-Zélande et dans la région EMEA : Adobe recommande aux clients Real-Time CDP Prime et Ultimate de faire passer les cas d’utilisation de collaboration en matière de données de [!DNL Segment Match] à Real-Time CDP Collaboration. Consultez la [documentation](https://experienceleague.adobe.com/fr/docs/real-time-cdp-collaboration/using/home) et le [guide de démarrage rapide](https://experienceleague.adobe.com/fr/docs/real-time-cdp-collaboration/using/quick-start-guide) pour Real-Time CDP Collaboration et contactez l’équipe de votre compte Adobe pour en savoir plus.
->* Pour les clients de toutes les autres zones géographiques : [!DNL Segment Match] est l’option recommandée jusqu’à la sortie de Real-Time CDP Collaboration dans ces zones géographiques en 2026.
+>La correspondance de segments Adobe Experience Platform sera arrêtée et ne sera plus disponible après le 27 novembre 2026. Adobe recommande aux clients Real-Time CDP Prime et Ultimate de passer des cas d’utilisation de collaboration de données de [!DNL Segment Match] à Real-Time CDP Collaboration. Consultez la [documentation](https://experienceleague.adobe.com/fr/docs/real-time-cdp-collaboration/using/home) et le [guide de démarrage rapide](https://experienceleague.adobe.com/fr/docs/real-time-cdp-collaboration/using/quick-start-guide) pour Real-Time CDP Collaboration et contactez l’équipe de votre compte Adobe pour en savoir plus.
 
 La correspondance de segments Adobe Experience Platform est un service de partage de segments qui permet à deux utilisateurs d’Experience Platform ou plus d’échanger des données de segment de manière sécurisée, régulée et respectueuse de la confidentialité. [!DNL Segment Match] utilise les normes de confidentialité et les identifiants personnels Experience Platform tels que les e-mails hachés, les numéros de téléphone hachés et les identifiants d’appareils comme les IDFA et les GAID.
 

@@ -18,7 +18,7 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: 18c3bd1c361dc9e284ede73aa84d188b76ef45c0
 workflow-type: tm+mt
 source-wordcount: 1868
 ht-degree: 56%
@@ -718,4 +718,5 @@ La section suivante répertorie les différents connecteurs de source de stockag
 | [!DNL HDFS] | `54e221aa-d342-4707-bcff-7a4bceef0001` |
 | [!DNL Oracle Object Storage] | `c85f9425-fb21-426c-ad0b-405e9bd8a46c` |
 | [!DNL SFTP] | `bf367b0d-3d9b-4060-b67b-0d3d9bd06094` |
+
 

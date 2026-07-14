@@ -20,7 +20,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 4161
 ht-degree: 94%
@@ -806,4 +806,5 @@ Actuellement, Adobe Experience Platform n’identifie pas les données différ
 | 15/03/2019 | Ajout de la propriété « schemaRef » aux jeux de données | La propriété « schemaRef » d’un jeu de données contient un URI référençant le XDM sur lequel le jeu de données est basé et représente tous les champs potentiels pouvant être utilisés par le jeu de données. |
 | 15/03/2019 | Tous les identifiants d’utilisateur final mappent vers la propriété « identityMap ». | Le « identityMap » est une encapsulation de tous les identifiants uniques d’un sujet, tels que CRMID, ECID ou ID de programme de fidélité. Cette map est utilisée par le [[!DNL Identity Service]](../identity-service/home.md) pour résoudre toutes les identités connues et anonymes d’un sujet, formant un graphique d’identités unique pour chaque utilisateur final. |
 | 30/05/2019 | Fin de vie et suppression de la propriété « schema » des jeux de données | La propriété « schema » du jeu de données fournissait un lien de référence vers le schéma à l’aide du point d’entrée `/xdms` obsolète dans l’API [!DNL Catalog] Cette valeur a été remplacée par un « schemaRef » qui fournit les valeurs « id », « version » et « contentType » du schéma, comme indiqué dans la nouvelle API [!DNL Schema Registry]. |
+
 

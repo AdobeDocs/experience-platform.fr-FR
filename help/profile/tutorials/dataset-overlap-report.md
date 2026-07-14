@@ -17,7 +17,7 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 902
 ht-degree: 2%
@@ -146,4 +146,5 @@ Ce rapport fournit les informations suivantes :
 ## Étapes suivantes
 
 Après avoir suivi ce tutoriel, vous êtes désormais en mesure de générer le rapport de chevauchement de jeux de données à l’aide de l’API Real-Time Customer Profile. Pour en savoir plus sur l’utilisation des données de profil dans l’API et l’interface utilisateur d’Experience Platform, commencez par lire la [documentation de présentation des profils](../home.md).
+
 

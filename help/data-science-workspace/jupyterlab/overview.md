@@ -17,7 +17,7 @@ topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 1898
 ht-degree: 88%
@@ -280,5 +280,6 @@ En outre, les dépendances suivantes sont utilisées, mais ne sont pas répertor
 
 * CUDA 11.2
 * CUDNN 8.1
+
 
 

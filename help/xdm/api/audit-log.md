@@ -9,7 +9,7 @@ product_v2:
   - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: ce1936c345751033beb6901536d6f56467d51fae
 workflow-type: tm+mt
 source-wordcount: 405
 ht-degree: 12%
@@ -131,4 +131,5 @@ Une réponse réussie renvoie une liste chronologique des modifications apporté
 | `value` | Valeur affectée au champ nouveau ou mis à jour. |
 
 {style="table-layout:auto"}
+
 

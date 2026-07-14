@@ -13,7 +13,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 580
 ht-degree: 41%
@@ -130,4 +130,5 @@ Pour continuer à travailler sur les données ingérées, procédez de la façon
    - Utilisez les notebooks Jupyter dans le Workspace de science des données pour accéder à vos données, les explorer, les visualiser et les comprendre.
 - [Regrouper les fichiers sources dans une recette](./package-source-files-recipe.md)
    - Suivez ce tutoriel pour savoir comment importer votre propre modèle dans [!DNL Data Science Workspace] en regroupant les fichiers sources dans un fichier de recette importable.
+
 

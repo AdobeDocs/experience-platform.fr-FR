@@ -2,7 +2,7 @@
 title: Point d’entrée des événements d’audit
 description: Découvrez comment effectuer des appels au point d’entrée /audit_events dans l’API Reactor.
 exl-id: 59cd58dc-4085-47b7-846f-d3937740dd9b
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: ce1936c345751033beb6901536d6f56467d51fae
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 97%
@@ -235,4 +235,5 @@ Une réponse réussie renvoie les détails de l’événement d’audit.
   }
 }
 ```
+
 

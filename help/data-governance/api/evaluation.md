@@ -14,7 +14,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 1569
 ht-degree: 92%
@@ -698,4 +698,5 @@ Une réponse réussie renvoie un tableau reprenant les résultats de l’évalua
 ## Évaluation des politiques pour [!DNL Real-Time Customer Profile]
 
 L’API [!DNL Policy Service] peut également être utilisée pour vérifier les violations de politique impliquant l’utilisation d’audiences [!DNL Real-Time Customer Profile]. Pour plus d’informations, consultez le tutoriel sur [l’application de la conformité d’utilisation des données aux audiences](../../segmentation/tutorials/governance.md).
+
 

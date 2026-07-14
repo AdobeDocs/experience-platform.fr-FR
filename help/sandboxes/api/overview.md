@@ -17,7 +17,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: cb424651efb1b4d71717c06a4b0d6e9354f0dcc7
+source-git-commit: b442fd04f0ddcfda581bba72c5684dce5871c1a9
 workflow-type: tm+mt
 source-wordcount: 334
 ht-degree: 37%
@@ -45,4 +45,5 @@ Actuellement, les types de sandbox pris en charge sur Experience Platform sont l
 ## Étapes suivantes
 
 Pour commencer à effectuer des appels à l’aide de l’API [!DNL Sandbox], consultez le guide de prise en main [guide de prise en main](./getting-started.md), puis sélectionnez l’un des guides des points d’entrée pour savoir comment utiliser des points d’entrée spécifiques.
+
 
