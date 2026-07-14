@@ -196,7 +196,7 @@ Le tableau ci-dessous ajoute des détails. Il indique la fonction de chaque appl
 | [Real-Time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/fr/docs/experience-platform/rtcdp/home) | Gérer les audiences et l’activation : créez des audiences, mettez souvent à jour l’appartenance, envoyez des audiences et des attributs aux destinations. Prend en charge les cas d’utilisation particuliers, professionnels et variés en fonction de votre licence. | Touchez les bonnes personnes et excluez les mauvaises sur les canaux payants, propriétaires et partenaires à l’aide de vos propres données client unifiées. |
 | [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer) | Concevoir des parcours et envoyer des messages : réagissez aux événements, aux chemins de branche et envoyez sur plusieurs canaux à partir d’un espace de travail de parcours. | Exécutez des séquences personnalisées (par exemple, intégration, rétention ou suivi du service) qui répondent à ce que le client vient de faire. |
 | [Customer Journey Analytics](https://experienceleague.adobe.com/fr/docs/customer-journey-analytics) | Générez des rapports et analysez les parcours et les résultats de campagne à l’aide d’une seule base de données. | Découvrez ce qui s’est passé et pourquoi sur plusieurs canaux afin d’améliorer les dépenses et l’expérience. |
-| [](https://experienceleague.adobe.com/fr/docs/mix-modeler) | Combinez les données connectées à [!DNL Experience Platform] avec des modèles pour mesurer les canaux et exécuter des scénarios de planification. | Planifiez et ajustez les dépenses marketing avec une vue régulière de la manière dont les canaux et d’autres facteurs affectent les résultats. |
+| [&#128279;](https://experienceleague.adobe.com/fr/docs/mix-modeler) | Combinez les données connectées à [!DNL Experience Platform] avec des modèles pour mesurer les canaux et exécuter des scénarios de planification. | Planifiez et ajustez les dépenses marketing avec une vue régulière de la manière dont les canaux et d’autres facteurs affectent les résultats. |
 
 ### Quand utiliser chaque application {#when-to-use-each-app}
 
@@ -207,7 +207,7 @@ Utilisez le tableau suivant pour trouver l’application adaptée à votre princ
 | [Real-Time CDP](https://experienceleague.adobe.com/fr/docs/experience-platform/rtcdp/home) | Définissez des audiences une fois à partir de données unifiées et activez-les de manière cohérente sur l’ensemble des canaux et outils (y compris les destinations en dehors d’Adobe). |
 | [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer) | Écoutez le comportement et orchestrez le message ou l’expérience suivant sur plusieurs canaux en temps quasi réel (parcours planifiés et pilotés par les événements). |
 | [Customer Journey Analytics](https://experienceleague.adobe.com/fr/docs/customer-journey-analytics) | Comprenez les parcours de bout en bout, identifiez les frictions et découvrez les audiences ou les opportunités d’action dans [!DNL Real-Time CDP] et [!DNL Adobe Journey Optimizer]. |
-| [](https://experienceleague.adobe.com/fr/docs/mix-modeler) | Mesurez la manière dont les canaux contribuent aux résultats et planifiez ou ajustez les dépenses marketing à l’aide de modèles qui utilisent des données connectées à [!DNL Experience Platform]. |
+| [&#128279;](https://experienceleague.adobe.com/fr/docs/mix-modeler) | Mesurez la manière dont les canaux contribuent aux résultats et planifiez ou ajustez les dépenses marketing à l’aide de modèles qui utilisent des données connectées à [!DNL Experience Platform]. |
 
 ### [!DNL AI Assistant] et agents dans les applications clés {#app-ai}
 
@@ -378,9 +378,9 @@ Votre contrat, la description du produit et la commande client peuvent définir 
 
 Utilisez les rubriques d’aide suivantes pour aller au-delà de cette présentation.
 
-- [Mécanismes de sécurisation d’Experience Platform et des applications ](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-diagrams/architecture-overview/guardrails) : présentation du fonctionnement des mécanismes de sécurisation dans les [!DNL Experience Platform] et les applications.
+- [Mécanismes de sécurisation d’Experience Platform et des applications &#x200B;](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-diagrams/architecture-overview/guardrails) : présentation du fonctionnement des mécanismes de sécurisation dans les [!DNL Experience Platform] et les applications.
 - [Mécanismes de sécurisation pour l’ingestion des données](https://experienceleague.adobe.com/fr/docs/experience-platform/ingestion/guardrails) : débit d’ingestion et limites associées.
-- [Mécanismes de sécurisation de Real-Time CDP ](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/guardrails/overview) : audiences, activation et utilisation des [!DNL Real-Time CDP].
+- [Mécanismes de sécurisation de Real-Time CDP &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/guardrails/overview) : audiences, activation et utilisation des [!DNL Real-Time CDP].
 - [Utilisation de la licence](https://experienceleague.adobe.com/en/docs/experience-platform/landing/license-usage-and-guardrails/data-management-best-practices) : gestion des données et pratiques d’utilisation de la licence sur [!DNL Experience Platform] (le cas échéant, pour votre organisation).
 
 Si votre workflow s’appuie fortement sur [!DNL Customer Journey Analytics], [!DNL Adobe Journey Optimizer], [!DNL Adobe Marketing Campaign Analytics] ou [!DNL Query Service], consultez également les rubriques relatives aux mécanismes de sécurisation pour ces produits dans l’aide de leur produit .
@@ -401,20 +401,20 @@ Ce tableau résume les rôles souvent impliqués à chaque étape et les parties
 
 Cette rubrique utilise les termes suivants de manière spécifique.
 
-- [!DNL Adobe Experience Platform] : services et fonctionnalités partagés : intégration de données, modélisation des données, [!DNL Identity Service], [!DNL Real-Time Customer Profile], segmentation, destinations, gouvernance des données, confidentialité, services tels que [!DNL Query Service] et fonctionnalités telles que les sandbox. Pour connaître les différences entre ces termes, voir [En quoi les fonctionnalités, services et applications d’Experience Platform diffèrent ](#feature-service-application).
+- [!DNL Adobe Experience Platform] : services et fonctionnalités partagés : intégration de données, modélisation des données, [!DNL Identity Service], [!DNL Real-Time Customer Profile], segmentation, destinations, gouvernance des données, confidentialité, services tels que [!DNL Query Service] et fonctionnalités telles que les sandbox. Pour connaître les différences entre ces termes, voir [En quoi les fonctionnalités, services et applications d’Experience Platform diffèrent &#x200B;](#feature-service-application).
 - [!DNL Adobe CX Enterprise] : interface unifiée et couche de services partagés par laquelle vous accédez généralement aux applications [!DNL Experience Platform] et [!DNL Experience Platform]. Voir [[!DNL Adobe CX Enterprise]](#cx-enterprise).
 - Applications : produits sous licence sur des [!DNL Experience Platform] (par exemple [!DNL Real-Time CDP], [!DNL Adobe Journey Optimizer], [!DNL Customer Journey Analytics], [!DNL Adobe Marketing Campaign Analytics]) qui regroupent des workflows pour des tâches spécifiques. Ils ne sont pas les mêmes que [!DNL Experience Platform] services tels que [!DNL Query Service] et [!DNL Identity Service]. Les éditions et applications associées apparaissent dans [Autres applications et éditions sur Experience Platform](#other-applications-and-editions).
 - [!DNL Adobe Marketing Campaign Analytics] (anciennement appelée [!DNL Adobe Mix Modeler]) : application sous licence pour la mesure et la planification du marketing (y compris la modélisation du marketing mix). [!DNL Experience League] aide sur les produits peut toujours utiliser les anciens chemins d’accès au nom du produit et du modéliseur de mix alors que la documentation est mise à jour après le changement de nom du produit.
 
-Cela correspond à la manière dont la présentation de la documentation Experience Platform [](https://experienceleague.adobe.com/en/docs/experience-platform/landing/documentation/overview) regroupe le contenu.
+Cela correspond à la manière dont la présentation de la documentation Experience Platform [&#128279;](https://experienceleague.adobe.com/en/docs/experience-platform/landing/documentation/overview) regroupe le contenu.
 
 ## Ressources supplémentaires {#additional-resources}
 
 Les rubriques d’aide et collections suivantes développent les concepts de cette page.
 
-- [Intégrations Adobe Experience Platform ](integrations.md) : méthode de connexion d’autres produits [!DNL Adobe CX Enterprise] à [!DNL Experience Platform] (sources et destinations).
-- [Présentation de ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/home) : principaux points d’entrée pour obtenir de l’aide.
-- [Présentation de la documentation Experience Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/documentation/overview) : organisation des rubriques d’aide.
+- [Intégrations Adobe Experience Platform &#x200B;](integrations.md) : méthode de connexion d’autres produits [!DNL Adobe CX Enterprise] à [!DNL Experience Platform] (sources et destinations).
+- [Présentation de &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/landing/home) : principaux points d’entrée pour obtenir de l’aide.
+- [Présentation de la documentation Experience Platform &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/landing/documentation/overview) : organisation des rubriques d’aide.
 - [Adobe Experience Platform et applications (diagrammes d&#39;architecture)](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications) : comment les [!DNL Experience Platform] et les applications s&#39;intègrent à un niveau élevé.
 - [Plans directeurs d’expérience digitale](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/overview/experience-cloud) : exemples de conception par cas d’utilisation et secteur.
 
