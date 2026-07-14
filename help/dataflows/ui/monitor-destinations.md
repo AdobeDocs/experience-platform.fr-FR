@@ -332,7 +332,7 @@ Par exemple, vous activez une audience appelée « Membres du programme de fidé
 >   - [[!DNL Adobe Target]](../../destinations/catalog/personalization/adobe-target-connection.md)
 >   - [[!DNL Custom Personalization]](../../destinations/catalog/personalization/custom-personalization.md)
 >   - [[!DNL Experience Cloud Audiences]](../../destinations/catalog/adobe/experience-cloud-audiences.md)
->   - [Composition d’audiences fédérées](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/connections/destinations){target="_blank"}
+>   - [Composition d’audiences fédérées](https://experienceleague.adobe.com/fr/docs/federated-audience-composition/using/connections/destinations){target="_blank"}
 >   - [[!DNL Google Ad Manager]](../../destinations/catalog/advertising/google-ad-manager.md)
 >   - [[!DNL Google Ads]](../../destinations/catalog/advertising/google-ads-destination.md)
 >   - [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md)
