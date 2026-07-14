@@ -23,9 +23,9 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 315ef465955d574a215461dcb5138376519f1311
+source-git-commit: 3f7888d68ee85e63247a28c315af9fed83a932a4
 workflow-type: tm+mt
-source-wordcount: 3731
+source-wordcount: 3791
 ht-degree: 12%
 
 ---
@@ -129,8 +129,7 @@ Chaque exécution de flux de données affiche les détails suivants :
   > Suite à cette amélioration, les utilisateurs des destinations de diffusion en continu peuvent voir une baisse attendue de leur nombre d’**[!UICONTROL identités en échec]**.
 
 
-- **[!UICONTROL Taux d’activation]** : pourcentage d’identités reçues qui ont été activées avec succès. La formule suivante montre comment cette valeur est calculée :
-  ![Formule du taux d’activation.](../assets/ui/monitor-destinations/activation-rate-formula.png)
+- **[!UICONTROL Taux d’activation]** : pourcentage d’identités reçues qui ont été activées avec succès. La formule suivante montre comment cette valeur est calculée :  ![Formule du taux d’activation.](../assets/ui/monitor-destinations/activation-rate-formula.png)
 - **[!UICONTROL Statut]** : représente le statut du flux de données : [!UICONTROL Terminé] ou [!UICONTROL Traitement]. [!UICONTROL Terminé] signifie que toutes les identités pour l’exécution du flux de données correspondant ont été exportées au cours d’une période d’une heure. [!UICONTROL Traitement] signifie que l’exécution du flux de données n’est pas encore terminée.
 
 Pour afficher les détails d’une exécution de flux de données spécifique, sélectionnez l’heure de début de l’exécution dans la liste.
@@ -331,26 +330,20 @@ Par exemple, vous activez une audience appelée « Membres du programme de fidé
 >
 >   - [[!DNL Adobe Commerce]](../../destinations/catalog/personalization/adobe-commerce.md)
 >   - [[!DNL Adobe Target]](../../destinations/catalog/personalization/adobe-target-connection.md)
->   - [[!DNL Bombora]](../../destinations/catalog/advertising/bombora.md)
 >   - [[!DNL Custom Personalization]](../../destinations/catalog/personalization/custom-personalization.md)
->   - [[!DNL Demandbase]](../../destinations/catalog/advertising/demandbase.md)
 >   - [[!DNL Experience Cloud Audiences]](../../destinations/catalog/adobe/experience-cloud-audiences.md)
 >   - [Composition d’audiences fédérées](https://experienceleague.adobe.com/fr/docs/federated-audience-composition/using/connections/destinations){target="_blank"}
 >   - [[!DNL Google Ad Manager]](../../destinations/catalog/advertising/google-ad-manager.md)
 >   - [[!DNL Google Ads]](../../destinations/catalog/advertising/google-ads-destination.md)
 >   - [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md)
 >   - [[!DNL Google DV360]](../../destinations/catalog/advertising/google-dv360.md)
->   - [[!DNL LINE]](../../destinations/catalog/mobile-engagement/line.md)
 >   - [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)
->   - [[!DNL SendGrid]](../../destinations/catalog/email-marketing/sendgrid.md)
->   - [[!DNL Snap Inc]](../../destinations/catalog/advertising/snap-inc.md)
 >
 >- Pour les destinations par lots, les mesures au niveau de l’audience sont actuellement enregistrées pour les exécutions de flux de données réussies uniquement. Elles ne sont pas enregistrées pour les exécutions de flux de données ayant échoué et les enregistrements exclus. Pour les exécutions de flux de données vers des destinations de diffusion en continu, les mesures sont capturées et affichées pour les enregistrements activés et exclus.
 
 ![Audiences mises en surbrillance dans le panneau flux de données.](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 
-Dans la vue au niveau de l’audience, les mesures sont agrégées sur plusieurs exécutions de flux de données au cours de la période sélectionnée. S’il existe plusieurs exécutions de flux de données, vous pouvez effectuer une analyse en profondeur à partir du niveau de l’audience pour afficher la répartition de chaque exécution de flux de données, filtrée par l’audience sélectionnée.
-Utilisez le bouton de filtre ![filter](/help/images/icons/filter-add.png) pour accéder à la vue d’exécution du flux de données pour chaque audience du flux de données.
+Dans la vue au niveau de l’audience, les mesures sont agrégées sur plusieurs exécutions de flux de données au cours de la période sélectionnée. S’il existe plusieurs exécutions de flux de données, vous pouvez effectuer une analyse en profondeur à partir du niveau de l’audience pour afficher la répartition de chaque exécution de flux de données, filtrée par l’audience sélectionnée.Utilisez le bouton de filtre ![filter](/help/images/icons/filter-add.png) pour accéder à la vue d’exécution du flux de données pour chaque audience du flux de données.
 
 ### Page Exécutions de flux de données {#dataflow-runs-page}
 
