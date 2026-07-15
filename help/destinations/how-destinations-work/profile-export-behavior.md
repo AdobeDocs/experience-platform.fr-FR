@@ -3,23 +3,14 @@ title: Comportement d’exportation de profils
 description: Découvrez comment le comportement d’exportation de profils varie entre les différents modèles d’intégration pris en charge dans les destinations Experience Platform.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
 TQID: https://experienceleague.adobe.com/DCZplb-dOVBCw3VGErsd1uCvdKfpLubZ-oDuidXFCn4
-product_v2:
-  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2:
-  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
-  - id: c132d929-fa62-4271-803e-b823be07b914
-  - id: ed0d8d0e-04b9-4326-be72-a0fbca265377
-subfeature_v2:
-  - id: b784da9a-7978-4766-bf1f-5ab2b23d894a
-  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
-  - id: d1823595-9241-4128-8a33-e4ac3bf08773
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: eb1c3e3ddfa995d9b801cfbe6ed925fe96af06c9
+product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: ed0d8d0e-04b9-4326-be72-a0fbca265377
+subfeature_v2: id: b784da9a-7978-4766-bf1f-5ab2b23d894aid: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 9aaa7d6c10e8bc58af810a9346ba661051489a6a
 workflow-type: tm+mt
-source-wordcount: 3288
-ht-degree: 76%
+source-wordcount: 3350
+ht-degree: 75%
 
 ---
 
@@ -126,18 +117,18 @@ Dans tous les cas décrits ci-dessus, seuls les profils pour lesquels des mises 
 >
 >Tous les attributs mappés sont exportés pour un profil, quel que soit l’emplacement des modifications. Ainsi, dans l’exemple ci-dessus, tous les attributs mappés pour ces cinq nouveaux profils seront exportés même si les attributs eux-mêmes restent inchangés.
 
-Experience Platform surveille les attributs à la recherche de modifications au niveau du sandbox et de la [politique de fusion](/help/profile/merge-policies/overview.md), et non par destination. Si une autre destination partage une politique de fusion avec la vôtre et mappe un objet parent, cet objet parent est ajouté à l’ensemble partagé d’attributs surveillés pour chaque destination sur la politique de fusion.
+Experience Platform surveille les attributs à la recherche de modifications au niveau du sandbox et de la [politique de fusion](/help/profile/merge-policies/overview.md), et non par destination. Si des audiences qui utilisent la même politique de fusion sont mappées à deux destinations différentes dans le même sandbox et que l’une de ces destinations mappe un [champ d’objet](/help/xdm/ui/fields/object.md) (un champ qui contient ses propres sous-champs, également appelé champs enfants), ce champ d’objet est ajouté à l’ensemble partagé d’attributs surveillés pour la politique de fusion.
 
-Par conséquent, une modification apportée à un champ enfant de cet objet parent peut déclencher une exportation vers votre destination, même si votre destination ne mappe pas cet objet ou champ parent. Le remplacement d’un champ avec la même valeur est également comptabilisé comme une modification et peut déclencher une exportation.
+Par conséquent, une modification apportée à un champ enfant de ce champ d’objet peut déclencher une exportation vers l’autre destination, même si le propre mappage de cette destination n’inclut pas le champ d’objet ou le champ enfant. Le remplacement d’un champ avec la même valeur est également comptabilisé comme une modification et peut déclencher une exportation.
 
-Pour cette raison, il se peut que les clients disposant de plusieurs destinations de diffusion en continu sur le même sandbox et la même politique de fusion voient plus d’exportations que prévu. Pour réduire les exportations inutiles, passez en revue les destinations partageant une politique de fusion et limitez les mappages d’objet parent aux champs dont chaque destination a besoin.
+Les clients disposant de plusieurs destinations de diffusion en continu dans le même sandbox, où les audiences mappées partagent une politique de fusion, peuvent voir plus d’exportations que prévu pour cette raison. Pour réduire les exportations inutiles, passez en revue les destinations auxquelles des audiences sont mappées et qui partagent une politique de fusion, et limitez les mappages de champs d’objet aux seuls champs enfants dont chaque destination a besoin.
 
-Prenons l’exemple de deux destinations de diffusion en continu, Destination A et Destination B, qui utilisent la même politique de fusion dans un sandbox.
+Prenons l’exemple de deux destinations de diffusion en continu, Destination A et Destination B, dans le même sandbox. Les audiences qui utilisent la même politique de fusion sont mappées à chaque destination.
 
-* Destination A mappe le `person.loyalty` de l’objet parent, qui inclut le `loyaltyId` de champ enfant.
-* La Destination B mappe un attribut différent, `person.demographics.age`, et ne mappe ni `person.loyalty` ni `loyaltyId`.
+* Destination A mappe l’`person.loyalty` du champ d’objet qui contient le `loyaltyId` du champ enfant.
+* La Destination B mappe un champ différent, `person.demographics.age`, et ne mappe ni `person.loyalty` ni `loyaltyId`.
 
-Sans cela, ces deux attributs ne sont pas liés. La seule connexion est que les deux destinations utilisent la même politique de fusion, ce qui entraîne l’inclusion des deux dans le jeu partagé d’attributs surveillés. Comme le mappage de la destination A ajoute du `person.loyalty` à cet ensemble partagé, une modification de `loyaltyId` peut également déclencher une exportation vers la destination B, même si la destination B n’a jamais mappé cet objet parent.
+Sans cela, ces deux champs ne sont pas liés. La seule connexion est que les audiences mappées à chaque destination utilisent la même politique de fusion, ce qui fait que le jeu partagé d’attributs surveillés inclut les deux champs. Comme le mappage de la destination A ajoute du `person.loyalty` à cet ensemble partagé, une modification de `loyaltyId` peut également déclencher une exportation vers la destination B, même si la destination B n’a jamais mappé ce champ d’objet.
 
 Si `loyaltyId` est remplacé par la même valeur, cela compte toujours comme une modification. Par conséquent, les destinations A et B peuvent recevoir une exportation.
 
@@ -147,7 +138,7 @@ Concernant les données exportées pour un profil donné, il est important de co
 
 | Ce qui détermine une exportation de destination | Éléments inclus dans l’exportation de destination |
 |---------|----------|
-| <ul><li>Les attributs et segments mappés servent de repère pour une exportation de destination. Cela signifie que si le statut de `segmentMembership` d’un profil passe à `realized` ou `exiting` ou qu’un attribut mappé est mis à jour, une exportation de destination est déclenchée.</li><li>La modification du mappage d’identités correspond à une identité ajoutée/supprimée pour le [graphique d’identité](/help/identity-service/features/identity-graph-viewer.md) du profil, pour les espaces de noms d’identité mappés pour l’exportation.</li><li>Toute modification pour un attribut est considérée comme une mise à jour, qu’il s’agisse ou non de la même valeur. Cela signifie qu’une réécriture sur un attribut est considérée comme une modification, même si la valeur elle-même n’a pas changé.</li><li>Les modifications apportées aux attributs sont surveillées au niveau du sandbox et de la politique de fusion, et non par destination. La modification d’un attribut mappé par une autre destination qui partage la même politique de fusion peut déclencher une exportation vers votre destination, même si votre destination ne mappe pas cet attribut.</li></ul> | <ul><li>Les segments qui sont mappés à la destination et qui ont été modifiés seront inclus dans l’objet `segmentMembership`. Dans certains scénarios, ils peuvent être exportés à l’aide de plusieurs appels. En outre, dans certains scénarios, certains segments qui n’ont pas été modifiés peuvent également être inclus dans l’appel. Dans tous les cas, seuls les segments mappés seront exportés.</li><li>Toutes les identités des espaces de noms qui sont mappés à la destination dans l’objet `identityMap` sont également incluses.</li><li>Seuls les attributs mappés sont inclus dans l’exportation de destination.</li></ul> |
+| <ul><li>Les attributs et segments mappés servent de repère pour une exportation de destination. Cela signifie que si le statut de `segmentMembership` d’un profil passe à `realized` ou `exiting` ou qu’un attribut mappé est mis à jour, une exportation de destination est déclenchée.</li><li>La modification du mappage d’identités correspond à une identité ajoutée/supprimée pour le [graphique d’identité](/help/identity-service/features/identity-graph-viewer.md) du profil, pour les espaces de noms d’identité mappés pour l’exportation.</li><li>Toute modification pour un attribut est considérée comme une mise à jour, qu’il s’agisse ou non de la même valeur. Cela signifie qu’une réécriture sur un attribut est considérée comme une modification, même si la valeur elle-même n’a pas changé.</li><li>Les modifications apportées aux attributs sont surveillées au niveau du sandbox et de la politique de fusion, et non par destination. Si les audiences mappées à une autre destination utilisent la même politique de fusion que les audiences mappées à la vôtre, une modification d’un attribut mappé par cette autre destination peut déclencher une exportation vers la vôtre, même si la destination ne mappe pas cet attribut.</li></ul> | <ul><li>Les segments qui sont mappés à la destination et qui ont été modifiés seront inclus dans l’objet `segmentMembership`. Dans certains scénarios, ils peuvent être exportés à l’aide de plusieurs appels. En outre, dans certains scénarios, certains segments qui n’ont pas été modifiés peuvent également être inclus dans l’appel. Dans tous les cas, seuls les segments mappés seront exportés.</li><li>Toutes les identités des espaces de noms qui sont mappés à la destination dans l’objet `identityMap` sont également incluses.</li><li>Seuls les attributs mappés sont inclus dans l’exportation de destination.</li></ul> |
 
 {style="table-layout:fixed"}
 
