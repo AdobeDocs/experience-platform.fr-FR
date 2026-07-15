@@ -2,7 +2,7 @@
 title: Présentation de l’extension Adobe Media Analytics for Audio and Video
 description: Découvrez lʼextension de balise Adobe Media Analytics for Audio and Video dans Adobe Experience Platform.
 exl-id: 426cfd08-aead-4b35-824c-45494bca2fc8
-TQID: https://experienceleague.adobe.com/---WEKSFg9Xfi-wK7GHjdHcsM9AyGlv9Q7N6URjrlN0
+TQID: https://experienceleague.adobe.com/%2D%2D%2DWEKSFg9Xfi-wK7GHjdHcsM9AyGlv9Q7N6URjrlN0
 product_v2:
   - id: a829a185-511f-4bf8-8dcf-9e684f8011cf
   - id: d0a3eab4-7b10-4d96-a71e-6c0f8e7b7c87
@@ -26,7 +26,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 7d565f9c521069c68836119ed6f991dc9eab4def
+source-git-commit: 84a6bfe05e26b606b772867be54dc0f63e82fde8
 workflow-type: tm+mt
 source-wordcount: 970
 ht-degree: 87%
