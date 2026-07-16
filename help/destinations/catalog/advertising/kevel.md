@@ -4,11 +4,24 @@ description: Utilisez la destination de streaming Niveau pour activer les audien
 last-substantial-update: 2026-06-18
 exl-id: 53ce2864-6a3b-4859-b14d-a03c2ce18884
 TQID: https://experienceleague.adobe.com/nJ7SPoowD09LIODa9JajFZXnzw28ovZRV0-bZSIIrYY
-product_v2: id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
-feature_v2: id: a37e4ecd-c740-426a-addf-cb1b483c5c5aid: c132d929-fa62-4271-803e-b823be07b914id: daec7ead-f475-492a-a3b3-02ae08565d6f
-subfeature_v2: id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342id: d1823595-9241-4128-8a33-e4ac3bf08773id: ee602049-8a18-43df-9299-a689a025a371
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adebid: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2:
+  - id: edbd1a0e-46c8-49da-8c10-dba9ec80bba9
+feature_v2:
+  - id: a37e4ecd-c740-426a-addf-cb1b483c5c5a
+  - id: c132d929-fa62-4271-803e-b823be07b914
+  - id: daec7ead-f475-492a-a3b3-02ae08565d6f
+subfeature_v2:
+  - id: cbd4a8d8-97a6-4ac9-b8d6-b6c1f28d3342
+  - id: d1823595-9241-4128-8a33-e4ac3bf08773
+  - id: ee602049-8a18-43df-9299-a689a025a371
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+  - id: c7d04a2c-412a-4c9d-9d7a-4456eaa5adeb
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 305de8bd2ead8f6e688b34672311d119364d4d62
 workflow-type: tm+mt
 source-wordcount: 1524
@@ -30,14 +43,14 @@ Utilisez la destination de diffusion en continu [!DNL Kevel] pour activer les au
 
 **Ciblez les audiences de médias de vente au détail en temps réel.** Vous pouvez activer les audiences comportementales propriétaires riches dans vos expériences médias de vente au détail afin de diffuser des annonces plus pertinentes et des performances plus solides. Dans Experience Platform, vous créez des audiences basées sur l’intention et les valeurs élevées, telles que les acheteurs fréquents de catégories ou les utilisateurs ayant un intérêt récent pour les produits, et synchronisez ces adhésions avec les [!DNL Kevel] en temps réel. [!DNL Kevel] rend immédiatement ces segments disponibles pour [ad decisioning](https://dev.kevel.com/docs/segment-targeting), ce qui permet un ciblage précis des produits sponsorisés et d’autres formats dans les expériences de recherche, de navigation et d’application. Dès que les utilisateurs se qualifient, vous pouvez agir sur ces signaux pour générer des impressions plus pertinentes, un meilleur ciblage, ainsi qu’une mesure et un retour sur investissement améliorés.
 
-**Mesurer l’impact incrémentiel.** Vous pouvez également exporter l’affectation de groupe d’un utilisateur ou d’une utilisatrice en tant qu’attribut de profil pour alimenter le test d’incrémentalité [ d’[!DNL Kevel]](https://dev.kevel.com/docs/incrementality). [!DNL Kevel] présente une cohorte de contrôle et la compare à celle des utilisateurs exposés afin de quantifier l’effet élévateur *causal* généré par vos campagnes, plutôt que de se fier à des mesures proxy telles que le nombre de nouveaux clients sur la marque ou l’effet élévateur basé sur les corrélations. Vous pouvez ainsi prouver des ventes et des conversions incrémentielles tout en réduisant [!DNL Kevel] l’impact sur le chiffre d’affaires en diffusant la meilleure publicité éligible suivante aux utilisateurs retenus.
+**Mesurer l’impact incrémentiel.** Vous pouvez également exporter l’affectation de groupe d’un utilisateur ou d’une utilisatrice en tant qu’attribut de profil pour alimenter le test d’incrémentalité [&#x200B; d’[!DNL Kevel]](https://dev.kevel.com/docs/incrementality). [!DNL Kevel] présente une cohorte de contrôle et la compare à celle des utilisateurs exposés afin de quantifier l’effet élévateur *causal* généré par vos campagnes, plutôt que de se fier à des mesures proxy telles que le nombre de nouveaux clients sur la marque ou l’effet élévateur basé sur les corrélations. Vous pouvez ainsi prouver des ventes et des conversions incrémentielles tout en réduisant [!DNL Kevel] l’impact sur le chiffre d’affaires en diffusant la meilleure publicité éligible suivante aux utilisateurs retenus.
 
 ## Conditions préalables {#prerequisites}
 
 Pour vous préparer à l’utilisation de la destination [!DNL Kevel], assurez-vous que les conditions préalables suivantes sont remplies :
 
 - Vous devez disposer d’un réseau **[!DNL Kevel]actif** ainsi que d’un accès API.
-- Vous avez besoin d’une clé API **avec les autorisations pour créer des segments et mettre à jour les enregistrements [!DNL UserDB].**[!DNL Kevel]
+- Vous avez besoin d’une clé API **avec les autorisations pour créer des segments et mettre à jour les enregistrements [!DNL UserDB].**&#x200B;[!DNL Kevel]
 - Vous devez configurer des espaces de noms d’identité dans Experience Platform qui correspondent aux identités envoyées par votre site ou votre application lors des demandes d’annonces [!DNL Kevel], telles que l’ECID, le GAID, l’IDFA et l’ID de fidélité.
 - Mappez uniquement les identités que vous envoyez lors des demandes d’annonces en temps réel. Chaque identité mappée génère un enregistrement [!DNL UserDB].
 
@@ -90,7 +103,7 @@ Audiences prises en charge par type de données d’audience :
 |--------------------|-----------|-------------|-----------|
 | [Audiences de personnes](/help/segmentation/types/people-audiences.md) | Oui | En fonction des profils client, ce qui vous permet de cibler des groupes spécifiques de personnes pour les campagnes marketing. | Acheteurs fréquents, personnes abandonnant leur panier |
 | [Audiences de compte](/help/segmentation/types/account-audiences.md) | Non | Ciblez des individus au sein d’organisations spécifiques pour les stratégies marketing basées sur les comptes. | Marketing B2B |
-| [Audiences de prospects ](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
+| [Audiences de prospects &#x200B;](/help/segmentation/types/prospect-audiences.md) | Non | Ciblez les individus qui ne sont pas encore clients, mais qui partagent des caractéristiques avec votre audience cible. | Prospection à l’aide de données tierces |
 | [Exportations de jeux de données](/help/catalog/datasets/overview.md) | Non | Collections de données structurées stockées dans le lac de données [!DNL Adobe Experience Platform]. | Rapports, workflows de science des données |
 
 {style="table-layout:auto"}
