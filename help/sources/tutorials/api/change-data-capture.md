@@ -9,7 +9,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b23e006f-0a29-4f1d-8fd0-77aa56f3d12b
-source-git-commit: f22655c99ef0353225df840eb843206fd9d3cda8
+source-git-commit: null
 workflow-type: tm+mt
 source-wordcount: 1536
 ht-degree: 0%
@@ -124,7 +124,7 @@ Activez la capture de données de modification pour les sources d’espace de st
 
 Toutes les sources d’espace de stockage utilisent le même format de colonne `_change_request_type` décrit dans la section [Sources basées sur des fichiers](#file-based-sources) ci-dessus.
 
-**Exemple : activer la capture de données de modification lors de la création d’une connexion source d’espace de stockage**
+### Exemple : activer la capture de données de modification lors de la création d’une connexion source d’espace de stockage
 
 Lors de la création de votre connexion source d’espace de stockage, définissez `params.cdcEnabled` sur `true` pour activer la capture de données de modification. Pour les sources basées sur des fichiers, les opérations de modification reposent également sur la colonne de contrôle `_change_request_type` décrite ci-dessus.
 
@@ -254,7 +254,7 @@ Lisez la documentation suivante pour savoir comment activer la capture de donné
 * [Créer une connexion  [!DNL Snowflake]  base](../api/create/databases/snowflake.md).
 * [Créer une connexion source pour une base de données](../api/collect/database-nosql.md#create-a-source-connection).
 
-**Exemple : activer la capture de données de modification lors de la création d’une connexion source à la base de données**
+### Exemple : activer la capture de données de modification lors de la création d’une connexion source à la base de données
 
 Pour les sources de base de données prises en charge, définissez `params.cdcEnabled` sur `true` lors de la création de votre connexion source pour activer la capture de données de modification. Avant d’utiliser cette option, assurez-vous que le suivi des modifications est activé dans votre système source et que Data Mirror avec schémas relationnels est configuré dans Experience Platform.
 
